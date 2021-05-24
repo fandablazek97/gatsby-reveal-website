@@ -1,0 +1,108 @@
+// Buttons inline groups
+
+.btn-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: $buttongroup-margin;
+
+  & > * {
+    margin-right: $buttongroup-spacing;
+  }
+}
+
+.btn-group-left {
+  @extend .btn-group;
+}
+
+.btn-group-center {
+  @extend .btn-group;
+  justify-content: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.btn-group-right {
+  @extend .btn-group;
+  justify-content: flex-end;
+
+  & > * {
+    margin-left: $buttongroup-spacing;
+    margin-right: 0;
+  }
+}
+
+.btn-group-column {
+  @extend .btn-group;
+  flex-direction: column;
+
+  & > * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.btn-group-no-margin {
+  @extend .btn-group;
+
+  & > * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Responsive button groups
+// Only on tablet
+@media (max-width: $break-tablet) {
+  .m-btn-group-center {
+    justify-content: center;
+  }
+
+  .m-btn-group-left {
+    justify-content: flex-start;
+  }
+
+  .m-btn-group-right {
+    justify-content: flex-end;
+  }
+
+  .m-btn-group-column {
+    flex-direction: column;
+
+    & > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+// Only on mobile
+@media (max-width: $break-mobile) {
+  .s-btn-group-center {
+    justify-content: center;
+  }
+
+  .s-btn-group-left {
+    justify-content: flex-start;
+  }
+
+  .s-btn-group-right {
+    justify-content: flex-end;
+  }
+
+  .s-btn-group-column {
+    flex-direction: column;
+
+    & > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

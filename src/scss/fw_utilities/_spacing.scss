@@ -1,0 +1,77 @@
+//
+// SPACERS - HELPER CLASSES
+// Lze aplikovat na jakýkoliv prvek při požadavku na úpravu
+// Spacery nejsou responzivní
+
+// Paddings
+@each $class, $spacer in $spacers {
+  .pt-#{$class} {
+    padding-top: $spacer !important;
+  }
+  .pr-#{$class} {
+    padding-right: $spacer !important;
+  }
+  .pb-#{$class} {
+    padding-bottom: $spacer !important;
+  }
+  .pl-#{$class} {
+    padding-left: $spacer !important;
+  }
+  .px-#{$class} {
+    padding-left: $spacer !important;
+    padding-right: $spacer !important;
+  }
+  .py-#{$class} {
+    padding-top: $spacer !important;
+    padding-bottom: $spacer !important;
+  }
+  .p-#{$class} {
+    padding: $spacer !important;
+  }
+  .padding-#{$class} {
+    padding: $spacer !important;
+  }
+}
+
+// Margins
+@each $class, $spacer in $spacers {
+  .mt-#{$class} {
+    margin-top: $spacer !important;
+  }
+  .mr-#{$class} {
+    margin-right: $spacer !important;
+  }
+  .mb-#{$class} {
+    margin-bottom: $spacer !important;
+  }
+  .ml-#{$class} {
+    margin-left: $spacer !important;
+  }
+  .mx-#{$class} {
+    margin-left: $spacer !important;
+    margin-right: $spacer !important;
+  }
+  .my-#{$class} {
+    margin-top: $spacer !important;
+    margin-bottom: $spacer !important;
+  }
+  .margin-#{$class} {
+    margin: $spacer !important;
+  }
+}
+
+// EMPTY SPACES - ES
+// Aplikuje se na samostatný div
+
+@each $class, $spacer in $spacers {
+  .es-#{$class} {
+    display: block;
+    width: 100%;
+    height: $spacer;
+  }
+  .empty-space-#{$class} {
+    display: block;
+    width: 100%;
+    height: $spacer;
+  }
+}

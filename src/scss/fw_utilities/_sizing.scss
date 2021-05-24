@@ -1,0 +1,25 @@
+//
+// SIZERS - HELPER CLASSES
+// Lze aplikovat na jakýkoliv prvek při požadavku na úpravu
+
+// Widths
+@each $value, $sizer in $sizers {
+  .w-#{$value} {
+    width: $sizer !important;
+  }
+}
+
+.w-screen {
+  width: 100vw !important;
+}
+
+// Heights
+@each $value, $sizer in $sizers {
+  .h-#{$value} {
+    height: $sizer !important;
+  }
+}
+
+.h-screen {
+  width: 100vh !important;
+}

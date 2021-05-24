@@ -1,0 +1,429 @@
+//  Framework Variebles
+//  --------------------
+//
+//  Table of Contents:
+//
+//   1. Colors & color maps
+//   2. Global
+//   3. Layout, Breakpoints & Containers
+//   4. Grid
+//   5. Typography
+//   6. Typography Helpers
+//   7. Lists
+//   8. Buttons
+//   9. Button Group
+//   10. Utilities maps
+
+// 1. Colors
+// ---------
+$white: white;
+$gray-50: #f8f9fa;
+$gray-100: #f2f4f5;
+$gray-200: #e5e7e9;
+$gray-300: #c1c5c9;
+$gray-400: #a5a9ab;
+$gray-500: #707376;
+$gray-600: #484b4d;
+$gray-700: #252628;
+$gray-800: #19191a;
+$gray-900: #111213;
+$black: black;
+
+$grays: (
+  50: $gray-50,
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900,
+);
+
+// base colors
+$blue: #2552da;
+$violet: #601ad7;
+$purple: #7149b7;
+$pink: #dc3a8b;
+$red: #f50c24;
+$orange: #f2750e;
+$yellow: #efaf0e;
+$green: #14a045;
+$teal: #1ec1c4;
+$cyan: #0dbff0;
+
+$colors: (
+  blue: $blue,
+  violet: $violet,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-500,
+  gray-dark: $gray-800,
+  black: $black,
+);
+
+// theme colors
+$primary: #124ee6;
+$secondary: #525252;
+$success: #14a045;
+$alert: #efaf0e;
+$warning: #ff4400;
+$light: $gray-100;
+$dark: $gray-900;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  alert: $alert,
+  warning: $warning,
+  light: $light,
+  dark: $dark,
+);
+
+// Default color darken - used on button hovers
+// Procentuelní ztmavení barev z palety theme-colors na komponentech (hovery na buttnech atd.)
+$darken-amount: 8%;
+
+// Procentuelní ztmavení barev pro ztility barevných přechodů
+$background-gradients-darken-amount: 15%;
+
+// 2. Global
+// ---------
+// root
+$global-font-size: 62.5%; // influence size of `rem` unit and spacing across all website
+$global-scroll-behavior: smooth;
+
+// Body
+$body-background: $gray-100;
+$body-font-color: $gray-700;
+$body-font-size: 1.6rem;
+$body-lineheight: 1.5;
+$body-font-weight: 400;
+$body-font-style: normal;
+$body-overflow-x: hidden;
+$body-padding: 0;
+
+// Effects
+$global-transition-time: 280ms;
+$global-transition-easing: ease;
+
+// 3. Layout, Breakpoints & Containers
+// -------------
+$global-wrapper: 1366px;
+$global-wrapper-padding: calc(
+  2rem + 3%
+); // On mobile, tablet and wide-wrapper on large devices (e.g. navbar wrapper)
+
+// Breakpoints
+$break-mobile: 570px;
+$break-tablet: 980px;
+$break-large: 2121px;
+
+// 4. Grid
+// --------
+$grid-columns: 12;
+$grid-gap-x: 2rem;
+$grid-gap-y: 4rem;
+$cell-padding: 2rem;
+
+// 5. Typography
+// -------------
+$font-family-primary: "montserrat", sans-serif;
+$font-family-secondary: "merriweather", serif;
+
+// paragraph
+$paragraph-max-width: 65ch;
+$paragraph-font-family: $font-family-primary;
+$paragraph-font-weight: $body-font-weight;
+$paragraph-font-style: $body-font-style;
+$paragraph-text-transform: none;
+$paragraph-color: $body-font-color;
+$paragraph-lineheight: $body-lineheight;
+$paragraph-margin-top: 0;
+$paragraph-margin-bottom: 2em;
+
+$p-font-size: 1.6rem;
+
+// headings
+$heading-font-family: $font-family-primary;
+$heading-font-weight: bold;
+$heading-font-style: normal;
+$heading-text-transform: uppercase;
+$heading-color: $gray-900;
+$heading-lineheight: 1.2;
+$heading-margin-top: 0;
+$heading-margin-bottom: 1em;
+
+// heading sizes - use `rem` units
+$h1-font-size: 5rem;
+$h2-font-size: 3.2rem;
+$h3-font-size: 2.6rem;
+$h4-font-size: 2.3rem;
+$h5-font-size: 2rem;
+$h6-font-size: 1.6rem;
+
+// links
+$link-color: $primary;
+$link-font-size: inherit;
+$link-font-style: inherit;
+$link-font-weight: inherit;
+$link-text-transform: inherit;
+$link-text-decoration: none;
+
+// hover
+$link-hover-color: darken($primary, $darken-amount);
+$link-hover-text-decoration: none;
+
+// 6. Typography Helpers
+// ---------------------
+$p-small-font-size: $p-font-size * 0.8;
+$p-large-font-size: $p-font-size * 1.2;
+
+$lead-font-size: $p-font-size * 1.25;
+$lead-font-family: $font-family-primary;
+$lead-font-weight: 500;
+$lead-font-style: normal;
+$lead-text-transform: none;
+$lead-color: $gray-800;
+$lead-lineheight: $body-lineheight;
+$lead-margin-top: 3rem;
+$lead-margin-bottom: 3rem;
+
+// Dividers & Separators
+$heading-separator-width: 6rem;
+$heading-separator-height: 3px;
+$heading-separator-color: $primary;
+$heading-separator-distance: 3rem;
+
+$divider-max-width: $global-wrapper;
+$divider-border: 1px solid $gray-500;
+$divider-margin: 2rem auto;
+
+$hr-max-width: $divider-max-width;
+$hr-border: $divider-border;
+$hr-margin: $divider-margin;
+
+// 7. Lists
+// --------
+$list-lineheight: $paragraph-lineheight;
+$list-style-position: inside;
+$list-margin-left: 0;
+$list-margin-top: 0;
+$list-margin-bottom: $paragraph-margin-bottom;
+
+$list-item-margin-x: 2em;
+$list-item-margin-y: 1em;
+
+// 8. Buttons
+// ----------
+
+// Base button - default style
+$button-cursor: pointer;
+$button-font-family: $font-family-primary;
+$button-font-size: $p-font-size;
+$button-text-color: $white;
+$button-font-weight: 600;
+$button-text-transform: uppercase;
+$button-letter-spacing: 1px;
+$button-padding: 0.75em 1.2em;
+$button-margin: 1rem 1rem 1rem 0;
+$button-background: $primary;
+$button-border-style: solid;
+$button-border-width: 3px;
+$button-border-radius: 0;
+$button-border-color: $primary;
+$button-box-shadow: none;
+
+// Button icon
+$button-icon-size: 1.3em;
+$button-icon-margin: 2px;
+
+// Hover
+$button-hover-time: $global-transition-time;
+$button-hover-easing: $global-transition-easing;
+$button-hover-text-color: $white;
+$button-hover-background: darken($primary, $darken-amount);
+$button-hover-border-style: solid;
+$button-hover-border-color: darken($primary, $darken-amount);
+$button-hover-border-radius: 0;
+$button-hover-box-shadow: 0 3px 5px
+  rgba(
+    $color: #000000,
+    $alpha: 0.2,
+  );
+$button-hover-transform-scale: 1;
+
+// Disabled button
+$button-disabled-cursor: default;
+$button-disabled-text-color: $gray-200;
+$button-disabled-background: $gray-500;
+$button-disabled-border-radius: 0;
+$button-disabled-border-color: $gray-500;
+
+// Sizes
+$button-small: $p-small-font-size;
+$button-default: $p-font-size;
+$button-large: $p-large-font-size;
+$button-extra-large: $p-font-size * 1.8;
+
+// 9. Button Group
+// ----------------
+$buttongroup-margin: 1rem 0;
+$buttongroup-spacing: 1rem;
+
+// 10. Utility maps
+// ------------------
+
+// Spacers
+// Influence paddings, margins classes etc.
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 9,
+  10: $spacer * 10,
+  11: $spacer * 11,
+  12: $spacer * 12,
+  13: $spacer * 13,
+  14: $spacer * 14,
+  15: $spacer * 15,
+  16: $spacer * 16,
+  17: $spacer * 17,
+  18: $spacer * 18,
+  19: $spacer * 19,
+  20: $spacer * 20,
+);
+
+// Sizers & widths
+// Utility for width & height classes (and for dividers)
+$sizers: (
+  0: 0,
+  10: 10%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  40: 40%,
+  50: 50%,
+  60: 60%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  90: 90%,
+  100: 100%,
+);
+
+// Borders
+$border-style: solid;
+$border-color: $gray-400;
+
+$border-width: 1px;
+$border-widths: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+);
+
+$border-radius: 0;
+$border-radiuses: (
+  0: 0,
+  none: 0,
+  sharp: 0,
+  xs: 3px,
+  s: 6px,
+  m: 9px,
+  l: 18px,
+  xl: 27px,
+  2xl: 36px,
+  100: 100%,
+  circle: 100%,
+  rounded: 100%,
+);
+
+// Shadows
+$shadow-base-color: $black;
+$shadows: (
+  none: none,
+  xs: 0px 2px 5px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.06,
+    ),
+  s: 0px 5px 8px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.08,
+    ),
+  m: 0px 8px 15px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.08,
+    ),
+  l: 0px 12px 25px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.1,
+    ),
+  xl: 0px 18px 40px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.1,
+    ),
+  2xl: 0px 23px 70px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.14,
+    ),
+);
+
+// Opacity
+$opacities: (
+  0: 0,
+  5: 0.05,
+  10: 0.1,
+  15: 0.15,
+  20: 0.2,
+  30: 0.3,
+  40: 0.4,
+  50: 0.5,
+  60: 0.6,
+  70: 0.7,
+  80: 0.8,
+  90: 0.9,
+  95: 0.95,
+  100: 1,
+  1: 1,
+  none: 1,
+);
+
+// Font Weights
+$font-weights: (
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+  900: 900,
+);

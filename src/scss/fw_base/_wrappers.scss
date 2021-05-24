@@ -1,0 +1,62 @@
+// Wrappers & Containers
+section,
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+// Main Wrapper
+.wrap,
+.wrapper,
+.container {
+  max-width: $global-wrapper;
+  padding: 0 $global-wrapper-padding;
+  margin: 0 auto;
+}
+
+// Main wrapper with no padding
+.wrap-no-padding,
+.wrapper-no-padding,
+.container-no-padding {
+  max-width: $global-wrapper;
+  padding: 0;
+  margin: 0 auto;
+}
+
+// Main fluid - always 100% width
+.wrap-fluid,
+.wrapper-fluid,
+.container-fluid,
+.fluid {
+  width: 100%;
+  padding: 0 $global-wrapper-padding;
+}
+
+// Main fluid - always 100% width and with no padding
+.wrap-fluid-no-padding,
+.wrapper-fluid-no-padding,
+.container-fluid-no-padding,
+.full {
+  width: 100%;
+  padding: 0;
+}
+
+// Image Containers
+.container-img,
+.img-container,
+.img-fluid {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}

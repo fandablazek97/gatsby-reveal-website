@@ -1,0 +1,205 @@
+// GRID
+// Base classes of grid
+.grid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// Grid with gap between columns and rows
+.grid-gap {
+  @extend .grid;
+  column-gap: $grid-gap-x;
+  row-gap: $grid-gap-y;
+}
+
+// Base unit of layout (column)
+.cell {
+  flex: 1 1 auto;
+  padding: $cell-padding;
+}
+
+// STATIC GRID - same for all devices
+@for $i from 1 through $grid-columns {
+  .cell-#{$i} {
+    @extend .cell;
+    flex: 0 0 100% / $grid-columns * $i;
+  }
+  .cell-offset-#{$i} {
+    margin-left: 100% / $grid-columns * $i;
+  }
+  .offset-#{$i} {
+    margin-left: 100% / $grid-columns * $i;
+  }
+}
+
+// Offset zero class for all devices
+.cell-offset-0,
+.offset-0 {
+  margin-left: 0;
+}
+
+// RESPONSIVE GRID - MEDIA QUERIES
+// zde je extrémně důležité pořadí jednotlivých query za sebou
+// bez toho vykreslení layoutu nefunguje správně
+// jelikož query víc nahoře má menší prioritu než query pod ním
+// proto je první query na velká rozlišení
+
+// DESKTOP
+@media (min-width: $break-tablet) {
+  // Generate responsive gapless grid
+  @for $i from 1 through $grid-columns {
+    .l-#{$i} {
+      flex: 0 0 100% / $grid-columns * $i;
+    }
+    .l-offset-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
+  // Offset zero class
+  .l-offset-0 {
+    margin-left: 0;
+  }
+
+  // Generate responsive grid with gap
+  .grid-gap {
+    @for $i from 1 through $grid-columns {
+      .l-#{$i} {
+        flex: 1 1 auto;
+        min-width: calc(#{100% / $grid-columns * $i} - #{$grid-gap-x});
+        max-width: 100% / $grid-columns * $i;
+      }
+    }
+  }
+}
+
+// TABLET
+@media (max-width: $break-tablet) {
+  // Generate responsive gapless grid
+  @for $i from 1 through $grid-columns {
+    .m-#{$i} {
+      flex: 0 0 100% / $grid-columns * $i;
+    }
+    .m-offset-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
+  // Offset zero class
+  .m-offset-0 {
+    margin-left: 0;
+  }
+
+  // Generate responsive grid with gap
+  .grid-gap {
+    @for $i from 1 through $grid-columns {
+      .m-#{$i} {
+        flex: 1 1 auto;
+        min-width: calc(#{100% / $grid-columns * $i} - #{$grid-gap-x});
+        max-width: 100% / $grid-columns * $i;
+      }
+    }
+  }
+}
+
+// MOBILE
+@media (max-width: $break-mobile) {
+  .cell {
+    padding: $cell-padding / 2;
+  }
+
+  // Generate responsive gapless grid
+  @for $i from 1 through $grid-columns {
+    .s-#{$i} {
+      flex: 0 0 100% / $grid-columns * $i;
+    }
+    .s-offset-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
+  // Offset zero class
+  .s-offset-0 {
+    margin-left: 0;
+  }
+
+  // Generate responsive grid with gap
+  .grid-gap {
+    @for $i from 1 through $grid-columns {
+      .s-#{$i} {
+        flex: 1 1 auto;
+        min-width: calc(#{100% / $grid-columns * $i} - #{$grid-gap-x});
+        max-width: 100% / $grid-columns * $i;
+      }
+    }
+  }
+}
+
+//
+// Alignment in X & Y axis
+
+.x-flex-left,
+.x-flex-start,
+.x-flex-center,
+.x-flex-middle,
+.x-flex-right,
+.x-flex-end,
+.x-flex-stretch,
+.x-flex-justify,
+.y-flex-top,
+.y-flex-start,
+.y-flex-center,
+.y-flex-middle,
+.y-flex-bottom,
+.y-flex-end,
+.y-flex-around,
+.y-flex-between,
+.y-flex-justify {
+  display: flex;
+  flex-direction: column;
+}
+
+// X alignment
+.x-flex-left,
+.x-flex-start {
+  align-items: flex-start;
+}
+
+.x-flex-center,
+.x-flex-middle {
+  align-items: center;
+}
+
+.x-flex-right,
+.x-flex-end {
+  align-items: flex-end;
+}
+
+.x-flex-stretch,
+.x-flex-justify {
+  align-items: stretch;
+}
+
+// Y alignment
+.y-flex-top,
+.y-flex-start {
+  justify-content: flex-start;
+}
+
+.y-flex-center,
+.y-flex-middle {
+  justify-content: center;
+}
+
+.y-flex-bottom,
+.y-flex-end {
+  justify-content: flex-end;
+}
+
+.y-flex-around {
+  justify-content: space-around;
+}
+
+.y-flex-between,
+.y-flex-justify {
+  justify-content: space-between;
+}

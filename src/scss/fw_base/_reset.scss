@@ -1,0 +1,31 @@
+//
+// RESET VÝCHOZÍCH STYLŮ
+//
+@charset "UTF-8";
+
+:root {
+  font-size: $global-font-size;
+  scroll-behavior: $global-scroll-behavior;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: $body-overflow-x;
+  font-family: $font-family-primary;
+  font-size: $body-font-size;
+  color: $body-font-color;
+  line-height: $body-lineheight;
+  background: $body-background;
+  padding: $body-padding;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

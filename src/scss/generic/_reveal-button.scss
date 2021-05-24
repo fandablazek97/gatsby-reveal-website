@@ -1,0 +1,58 @@
+// Main BTN
+.btn-main-primary {
+  @extend .btn;
+  color: $button-text-color;
+  background-color: rgba($primary, $alpha: 0.6);
+  border: none;
+  box-shadow: none;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    width: 130%;
+    height: 100%;
+    background-color: $primary;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform $global-transition-time * 1.4
+        $global-transition-easing,
+      opacity $global-transition-time $global-transition-easing;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: translateX(0);
+    opacity: 1;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $button-text-color;
+    background-color: rgba($primary, $alpha: 0.6);
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  .btn-main-primary {
+    backdrop-filter: blur(10px);
+    background-color: rgba(darken($primary, 10%), $alpha: 0.3);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(darken($primary, 10%), $alpha: 0.3);
+    }
+  }
+}

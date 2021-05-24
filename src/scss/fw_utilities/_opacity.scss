@@ -1,0 +1,8 @@
+// Opacity utility classes
+
+// Opacities
+@each $value, $opacity in $opacities {
+  .opacity-#{$value} {
+    opacity: $opacity;
+  }
+}

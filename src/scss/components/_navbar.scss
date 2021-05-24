@@ -1,0 +1,364 @@
+.navbar {
+  width: 100vw;
+  height: 120px;
+  padding: 0 $global-wrapper-padding;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    180deg,
+    rgba(rgb(11, 11, 16), 0.9),
+    rgba(rgb(11, 11, 16), 0)
+  );
+
+  transition: transform 380ms ease, background 400ms ease, height 500ms ease;
+}
+
+// toggle při scrollnutí dolů
+.navbar--is-solid {
+  height: 80px;
+  top: 0;
+  background: rgba($color: $gray-900, $alpha: 0.93);
+}
+
+// toggle show / hide menu on function
+.navbar--is-hidden {
+  // top: -100%;
+  transform: translateY(-100%);
+}
+
+.navbar--is-visible {
+  // top: 0;
+  transform: translateY(0);
+}
+
+// Toggle pro otevření menu
+.navbar--open {
+  background-color: $gray-900;
+}
+
+// Logo
+.navbar__brand {
+  width: 4.2rem;
+  height: 4.2rem;
+  margin-right: auto;
+  z-index: 100;
+  color: white;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    filter: grayscale(100%) brightness(10);
+  }
+}
+
+.logo--white-overlay {
+  filter: brightness(0) invert(1);
+}
+
+// Burger menu icon
+.navbar__opener {
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.navbar__opener > div {
+  width: 28px;
+  height: 2px;
+  margin: 5px 0;
+  background: white;
+
+  opacity: 1;
+  transform: rotate(0) translateX(0);
+
+  transition: transform 330ms ease, opacity 330ms ease,
+    background-color 330ms ease;
+}
+
+.navbar__opener--active {
+  #opener-1 {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: white;
+  }
+  #opener-2 {
+    opacity: 0;
+    transform: translateX(10px);
+    background-color: white;
+  }
+  #opener-3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: white;
+  }
+}
+
+//
+// Otevírací menu fullscreen
+.navbar__menu {
+  width: 100vw;
+  height: 100vh;
+  padding: 12rem $global-wrapper-padding;
+  padding-bottom: 20vh;
+  background: transparent;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  visibility: hidden;
+
+  transition: background 420ms ease, visibility 0ms linear 600ms;
+}
+
+// Toggle menu open
+.navbar__menu--active {
+  background: $secondary;
+  visibility: visible;
+  transition: background 420ms ease;
+}
+
+// Animation of menu items on open toggle
+
+.navbar__menu--active {
+  .navbar__menu-list {
+    animation: showNavigationLinks 600ms ease 150ms forwards;
+  }
+  .navbar__menu-cta {
+    animation: showNavigationLinks 600ms ease 300ms forwards;
+  }
+  .socials {
+    animation: showNavigationLinks 600ms ease 450ms forwards;
+  }
+}
+
+// Menu Flex items inner (left and right side)
+// Levá strana otevřeného menu
+.navbar__menu-left {
+  flex: 2 1 44rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-weight: normal;
+  }
+}
+
+// Pravá strana otevřeného menu
+.navbar__menu-right {
+  flex: 1 1 44rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+// Listy a odkazy v otevřené navigaci
+// Hlavní menu - levá strana
+.navbar__menu-list {
+  list-style: none;
+  opacity: 0;
+
+  li {
+    margin: 1.2em 0;
+  }
+
+  a {
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  a:hover,
+  a:focus {
+    color: white;
+  }
+}
+
+// Hover effect -
+// Classa se aktivuje po hoveru na hlavní list
+.navbar__menu--hovering .navbar__menu-link {
+  color: $gray-600;
+}
+
+// Call to action
+// Pravá strana navigace
+.navbar__menu-cta {
+  list-style: none;
+  margin: 2rem 0;
+  opacity: 0;
+
+  h5 {
+    margin: 0;
+  }
+
+  li {
+    margin: 0.5em 0;
+  }
+
+  a {
+    color: $primary;
+    font-weight: 500;
+  }
+
+  a:hover,
+  a:focus {
+    color: white;
+  }
+
+  p {
+    color: $gray-500;
+  }
+}
+
+.navbar .socials {
+  opacity: 0;
+}
+
+// MEDIA QUERIES
+@media (max-width: $break-tablet) {
+  .navbar__brand {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+  .navbar__menu-left {
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  .navbar__menu-left .navbar__menu-link {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  .navbar__menu-right {
+    align-items: flex-start;
+  }
+}
+
+// dodatečné přizpůsobení pro telefon
+@media (max-width: $break-mobile) {
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar--is-solid {
+    height: 65px;
+  }
+  .navbar__brand {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .navbar__menu {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+  }
+
+  .navbar__menu-left {
+    justify-content: flex-start;
+  }
+
+  .navbar__menu-right {
+    justify-content: flex-end;
+    padding-bottom: 10rem;
+  }
+
+  .navbar__menu-list li {
+    margin: 0.8em 0;
+    padding: 0;
+  }
+
+  .navbar__menu-cta li {
+    margin: 0.2em 0;
+  }
+
+  .navbar__menu-left .navbar__menu-link {
+    font-size: 2.4rem;
+    letter-spacing: normal;
+  }
+}
+
+// Animations
+@keyframes showNavigationLinks {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Podpora rozostřené lišty navigace
+
+@supports (backdrop-filter: blur(25px)) {
+  .navbar--is-solid {
+    backdrop-filter: blur(25px);
+    background: rgba($color: $gray-900, $alpha: 0.8);
+  }
+}
+
+// Speciální třída, která změní styl navbaru stránkách s bílím pozadím
+// Přidáním třídy do body tagu lze udělat změny
+// Třída se přidává v komponentu u specifických stran přes react helmet component
+
+.navbar--dark {
+  // Změní ve výchozí pozici barvu pozadí, loga a burger menu
+  .navbar {
+    background: transparent;
+  }
+  .navbar__brand {
+    img {
+      filter: none;
+    }
+  }
+  .navbar__opener > div {
+    background: $gray-900;
+  }
+
+  // Při scrollnutí vrátí zpět originální barvy
+  .navbar--is-solid {
+    background: rgba($color: $gray-900, $alpha: 0.93);
+
+    .navbar__opener > div {
+      background: white;
+    }
+  }
+
+  @supports (backdrop-filter: blur(25px)) {
+    .navbar--is-solid {
+      backdrop-filter: blur(25px);
+      background: rgba($color: $gray-900, $alpha: 0.8);
+    }
+  }
+
+  .navbar__menu--active {
+    .navbar__brand {
+      img {
+        filter: inherit;
+      }
+    }
+  }
+}

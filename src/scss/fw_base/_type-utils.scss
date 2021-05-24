@@ -1,0 +1,187 @@
+// Typography utility and helper classes for text formating
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.normal-case,
+.non-case {
+  text-transform: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
+// Font weights
+.fw-100,
+.font-thin,
+.text-thin,
+.thin {
+  font-weight: 100;
+}
+
+.fw-200,
+.font-extralight,
+.text-extralight,
+.extralight {
+  font-weight: 200;
+}
+
+.fw-300,
+.font-light,
+.text-light,
+.light {
+  font-weight: 300;
+}
+
+.fw-400,
+.font-normal,
+.text-normal,
+.normal {
+  font-weight: 400;
+}
+
+.fw-500,
+.font-medium,
+.text-medium,
+.medium {
+  font-weight: 500;
+}
+
+strong,
+.strong,
+.fw-600,
+.font-semibold,
+.text-semibold,
+.semibold {
+  font-weight: 600;
+}
+
+.fw-700,
+.font-bold,
+.text-bold,
+.bold {
+  font-weight: 700;
+}
+
+.fw-800,
+.font-extrabold,
+.text-extrabold,
+.extrabold {
+  font-weight: 800;
+}
+
+.fw-900,
+.font-black,
+.text-black,
+.black {
+  font-weight: 900;
+}
+
+// Alignment
+.left {
+  text-align: left;
+  align-self: flex-start;
+}
+
+.right {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.center {
+  text-align: center;
+  align-self: center;
+}
+
+.justify {
+  text-align: justify;
+  align-self: stretch;
+}
+
+// Responsive alignment
+// Desktop only
+@media (min-width: $break-large) {
+  .l-left {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .l-right {
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  .l-center {
+    text-align: center;
+    align-self: center;
+  }
+
+  .l-justify {
+    text-align: justify;
+    align-self: stretch;
+  }
+}
+
+// Tablet only
+@media (max-width: $break-tablet) {
+  .m-left {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .m-right {
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  .m-center {
+    text-align: center;
+    align-self: center;
+  }
+
+  .m-justify {
+    text-align: justify;
+    align-self: stretch;
+  }
+}
+
+// Mobile only
+@media (max-width: $break-mobile) {
+  .s-left {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .s-right {
+    text-align: right;
+    align-self: flex-end;
+  }
+
+  .s-center {
+    text-align: center;
+    align-self: center;
+  }
+
+  .s-justify {
+    text-align: justify;
+    align-self: stretch;
+  }
+}

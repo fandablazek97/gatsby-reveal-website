@@ -1,0 +1,22 @@
+// Color Backgrounds - utility classes
+
+// Grays
+@each $value, $color in $grays {
+  .bg-gray-#{$value} {
+    background-color: $color;
+  }
+}
+
+// Base colors
+@each $value, $color in $colors {
+  .bg-#{$value} {
+    background-color: $color;
+  }
+}
+
+// Theme colors
+@each $value, $color in $theme-colors {
+  .bg-#{$value} {
+    background-color: $color;
+  }
+}

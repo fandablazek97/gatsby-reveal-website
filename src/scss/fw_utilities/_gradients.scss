@@ -1,0 +1,87 @@
+// Generete color gradients from color maps
+
+// Linear Gradients
+// Linear gradients from Theme colors
+@each $value, $color in $theme-colors {
+  .bg-gradient-to-r-#{$value} {
+    background: linear-gradient(
+      to right,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+  .bg-gradient-to-l-#{$value} {
+    background: linear-gradient(
+      to left,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+  .bg-gradient-to-t-#{$value} {
+    background: linear-gradient(
+      to top,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+  .bg-gradient-to-b-#{$value} {
+    background: linear-gradient(
+      to bottom,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+}
+
+// Linear gradients from Colors
+@each $value, $color in $colors {
+  .bg-gradient-to-r-#{$value} {
+    background: linear-gradient(
+      to right,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+  .bg-gradient-to-l-#{$value} {
+    background: linear-gradient(
+      to left,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+  .bg-gradient-to-t-#{$value} {
+    background: linear-gradient(
+      to top,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+  .bg-gradient-to-b-#{$value} {
+    background: linear-gradient(
+      to bottom,
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+}
+
+// Radial Gradients
+// radial gradients from Theme colors
+@each $value, $color in $colors {
+  .bg-gradient-radial-#{$value} {
+    background: radial-gradient(
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+}
+
+// radial gradients from Colors
+@each $value, $color in $theme-colors {
+  .bg-gradient-radial-#{$value} {
+    background: radial-gradient(
+      $color,
+      darken($color, $background-gradients-darken-amount)
+    );
+  }
+}

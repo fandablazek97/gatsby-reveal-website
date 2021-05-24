@@ -1,0 +1,23 @@
+// Colors - utility classes
+
+// Colors of typography
+// Grays
+@each $value, $color in $grays {
+  .gray-#{$value} {
+    color: $color;
+  }
+}
+
+// Base colors
+@each $value, $color in $colors {
+  .#{$value} {
+    color: $color;
+  }
+}
+
+// Theme colors
+@each $value, $color in $theme-colors {
+  .#{$value} {
+    color: $color;
+  }
+}

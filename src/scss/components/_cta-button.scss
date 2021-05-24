@@ -1,0 +1,26 @@
+.cta-button {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 80;
+
+  width: 6rem;
+  height: 6rem;
+  background-color: $primary;
+  border-radius: 50%;
+
+  color: white;
+  font-size: 4.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 360ms ease;
+
+  &:hover,
+  &:focus {
+    background-color: darken($primary, $darken-amount);
+    color: white;
+  }
+}

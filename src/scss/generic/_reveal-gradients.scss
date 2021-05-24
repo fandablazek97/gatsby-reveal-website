@@ -1,0 +1,28 @@
+// Special gradients
+// radial gradients from Theme colors
+
+// .bg-gradient-gray {
+//   background: linear-gradient(
+//     135deg,
+//     $gray-50,
+//     $gray-100,
+//     $gray-200,
+//     $gray-100,
+//     $gray-50
+//   );
+// }
+
+.bg-gradient-gray {
+  background: $gray-100;
+}
+
+.bg-gradient-dark-gray {
+  background: linear-gradient(
+    135deg,
+    $gray-950,
+    $gray-900,
+    $gray-800,
+    $gray-900,
+    $gray-950
+  );
+}

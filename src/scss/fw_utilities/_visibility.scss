@@ -1,0 +1,41 @@
+// Helpers for visiblity on page
+
+.hidden {
+  display: none;
+}
+
+// DESKTOP - při rozlišení větší než tablet
+@media (min-width: $break-tablet) {
+  .l-hidden {
+    display: none;
+  }
+}
+
+// TABLET - platí pouze pro tablet
+@media (max-width: $break-tablet) and (min-width: $break-mobile) {
+  .m-hidden {
+    display: none;
+  }
+}
+
+// TABLET a menší
+@media (max-width: $break-tablet) {
+  .sm-hidden {
+    display: none;
+  }
+}
+
+// MOBIL
+@media (max-width: $break-mobile) {
+  .s-hidden {
+    display: none;
+  }
+}
+
+// Visibility
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}

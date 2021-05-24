@@ -1,0 +1,101 @@
+//
+// REVEAL KARTY
+
+// Base Card
+.card {
+  display: block;
+  background-color: rgba($color: #fff, $alpha: 0.4);
+  text-decoration: none;
+  padding: 4rem 3rem;
+  margin-bottom: 6rem;
+  width: 100%;
+  max-width: 70rem;
+  overflow: hidden;
+  z-index: 3;
+  position: relative;
+
+  transition: transform 310ms ease;
+
+  .h4 {
+    text-transform: uppercase;
+    margin: 3rem 0;
+  }
+
+  span {
+    color: $primary;
+  }
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+
+  opacity: 0;
+  transform: translateX(-80%);
+
+  transition: opacity 680ms ease, transform 340ms ease; // Nastavení času hoveru karty
+}
+
+.card:hover::before,
+.card:focus::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card:hover,
+.card:focus {
+  text-decoration: none;
+  transform: scale(1.025);
+}
+
+// Card content
+.card__head-icon {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  img {
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+.card__arrow {
+  font-size: 2.8rem !important;
+  position: absolute;
+  right: 3rem;
+  top: calc(50% - 1.6rem);
+  bottom: calc(50% - 1.6rem);
+}
+
+@media (max-width: $break-mobile) {
+  .card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card__head-icon {
+    align-self: center;
+  }
+  .card__arrow {
+    // display: none !important;
+    display: block;
+    position: inherit;
+    margin: auto;
+    left: 0;
+  }
+}

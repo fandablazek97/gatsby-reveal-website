@@ -1,13 +1,16 @@
 import * as React from "react"
 
+// Components
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Cover404 from "../components/Cover404";
+
 const NotFoundPage = () => (
   <Layout>
-    <Seo title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Seo title="404: stránka nenalezena" />
+    
+    <Cover404></Cover404>
   </Layout>
 )
 

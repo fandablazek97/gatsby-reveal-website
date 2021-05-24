@@ -1,0 +1,531 @@
+//  Framework Variebles
+//  --------------------
+//
+//  Table of Contents:
+//
+//   1. Colors & color maps
+//   2. Global
+//   3. Layout, Breakpoints & Containers
+//   4. Grid
+//   5. Typography
+//   6. Typography Helpers
+//   7. Lists
+//   8. Buttons
+//   9. Button Group
+//   10. Utilities maps
+
+// 1. Colors
+// ---------
+$white: white;
+$gray-50: hsl(225, 10%, 98%);
+$gray-100: hsl(225, 8%, 93%);
+$gray-200: hsl(225, 10%, 90%);
+$gray-300: hsl(225, 8%, 85%);
+$gray-400: hsl(225, 5%, 78%);
+$gray-500: hsl(225, 5%, 68%);
+$gray-600: hsl(225, 3%, 37%);
+$gray-700: hsl(225, 3%, 25%);
+$gray-800: hsl(225, 3%, 15%);
+$gray-900: hsl(225, 8%, 8%);
+$gray-950: hsl(225, 8%, 4%);
+$black: black;
+
+$grays: (
+  50: $gray-50,
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900,
+  950: $gray-950,
+);
+
+// base colors
+$blue: #124ee6;
+$violet: #601ad7;
+$purple: #7149b7;
+$pink: #dc3a8b;
+$red: #f50c24;
+$orange: #ff6118;
+$yellow: #efaf0e;
+$green: #14a045;
+$teal: #1ec1c4;
+$cyan: #0dbff0;
+
+$colors: (
+  blue: $blue,
+  violet: $violet,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-500,
+  gray-dark: $gray-800,
+  black: $black,
+);
+
+// theme colors
+$primary: #f31035;
+$secondary: #12151f;
+$success: #14a045;
+$alert: #efaf0e;
+$warning: #ff4400;
+$light: $gray-100;
+$dark: $gray-900;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  alert: $alert,
+  warning: $warning,
+  light: $light,
+  dark: $dark,
+);
+
+// Default color darken - used on button hovers
+// Procentuelní ztmavení barev z palety theme-colors na komponentech (hovery na buttnech atd.)
+$darken-amount: 8%;
+
+// Procentuelní ztmavení barev pro ztility barevných přechodů
+$background-gradients-darken-amount: 24%;
+
+// 2. Global
+// ---------
+// root
+$global-font-size: 62.5%; // influence size of `rem` unit and spacing across all website
+$global-scroll-behavior: auto;
+$global-font-display: swap;
+
+// Body
+$body-background: $gray-50;
+$body-font-color: $gray-700;
+$body-font-size: 1.6rem;
+$body-lineheight: 1.8;
+$body-font-weight: 500;
+$body-font-style: normal;
+$body-overflow-x: hidden;
+$body-padding: 0;
+
+// Effects
+$global-transition-time: 280ms;
+$global-transition-easing: ease;
+
+// 3. Layout, Breakpoints & Containers
+// -------------
+$global-wrapper: 1560px;
+$global-wrapper-padding: calc(
+  1.5rem + 3%
+); // On mobile, tablet and wide-wrapper on large devices (e.g. navbar wrapper)
+
+// Breakpoints
+$break-mobile: 570px;
+$break-tablet: 980px;
+$break-large: 2100px;
+
+// 4. Grid
+// --------
+$grid-columns: 12;
+$grid-gap-x: 2rem;
+$grid-gap-y: 4rem;
+$cell-padding: 2rem;
+
+// 5. Typography
+// -------------
+// Font families settings
+$font-family-primary: "Montserrat", ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
+
+$font-family-secondary: "Merriweather", ui-serif, Georgia, Cambria,
+  "Times New Roman", Times, serif;
+
+// Nedávat k těmto fontům další fonty, ale pouze základní
+// Zbytek je vyplněný fixně v souboru type.scss
+$font-family-sans: "Montserrat";
+$font-family-serif: "Source Serif Pro";
+$font-family-mono: "Source Code Pro";
+
+// paragraph
+$paragraph-max-width: 65ch;
+$paragraph-font-family: $font-family-primary;
+$paragraph-font-weight: $body-font-weight;
+$paragraph-font-style: $body-font-style;
+$paragraph-text-transform: none;
+$paragraph-color: $body-font-color;
+$paragraph-lineheight: $body-lineheight;
+$paragraph-margin-top: 0;
+$paragraph-margin-bottom: 2em;
+
+$p-font-size: 1.6rem;
+
+// headings
+$heading-font-family: $font-family-primary;
+$heading-font-weight: bold;
+$heading-font-style: normal;
+$heading-text-transform: uppercase;
+$heading-color: $gray-800;
+$heading-lineheight: 1.2;
+$heading-margin-top: 0;
+$heading-margin-bottom: 1em;
+
+// heading sizes - use `rem` units
+$h1-font-size: 6.8rem;
+$h2-font-size: 3.8rem;
+$h3-font-size: 2.6rem;
+$h4-font-size: 2.3rem;
+$h5-font-size: 2rem;
+$h6-font-size: 1.6rem;
+
+// Custom font sizes
+$xl-font-size: 10rem;
+$xxl-font-size: 16rem;
+
+// links
+$link-color: $primary;
+$link-font-size: inherit;
+$link-font-style: inherit;
+$link-font-weight: inherit;
+$link-text-transform: inherit;
+$link-text-decoration: none;
+
+// hover
+$link-hover-color: darken($primary, $darken-amount);
+$link-hover-text-decoration: none;
+
+// 6. Typography Helpers
+// ---------------------
+$p-small-font-size: $p-font-size * 0.8;
+$p-large-font-size: $p-font-size * 1.15;
+
+$lead-font-size: $p-font-size * 1.5;
+$lead-font-family: $font-family-secondary;
+$lead-font-weight: 100;
+$lead-font-style: normal;
+$lead-text-transform: none;
+$lead-color: $gray-800;
+$lead-lineheight: 1.8;
+$lead-margin-top: 0;
+$lead-margin-bottom: 2em;
+
+// Dividers & Separators
+$heading-separator-width: 6rem;
+$heading-separator-height: 3px;
+$heading-separator-color: $primary;
+$heading-separator-distance: 3rem;
+
+$divider-max-width: $global-wrapper;
+$divider-border: 1px solid $gray-500;
+$divider-margin: 2rem auto;
+
+$hr-max-width: $divider-max-width;
+$hr-border: $divider-border;
+$hr-margin: $divider-margin;
+
+// 7. Lists
+// --------
+$list-lineheight: $paragraph-lineheight;
+$list-style-position: inside;
+$list-margin-left: 0;
+$list-margin-top: 0;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-font-weight: $body-font-weight;
+$list-marker-color: $primary;
+
+$list-item-margin-x: 2.3em;
+$list-item-margin-y: 0.8em;
+
+// 8. Buttons
+// ----------
+
+// Base button - default style
+$button-cursor: pointer;
+$button-font-family: $font-family-primary;
+$button-font-size: $p-font-size;
+$button-text-color: $white;
+$button-font-weight: 600;
+$button-text-transform: uppercase;
+$button-letter-spacing: 1px;
+$button-padding: 0.8em 2em;
+$button-margin: 1rem 1rem 1rem 0;
+$button-background: $primary;
+$button-border-style: solid;
+$button-border-width: 3px;
+$button-border-radius: 1px;
+$button-border-color: $primary;
+$button-box-shadow: none;
+
+// Button icon
+$button-icon-size: 1.3em;
+$button-icon-margin: 2px;
+
+// Hover
+$button-hover-time: $global-transition-time;
+$button-hover-easing: $global-transition-easing;
+$button-hover-text-color: $white;
+$button-hover-background: darken($primary, $darken-amount);
+$button-hover-border-style: solid;
+$button-hover-border-color: darken($primary, $darken-amount);
+$button-hover-border-radius: 0;
+$button-hover-box-shadow: 0 3px 8px
+  rgba(
+    $color: #000000,
+    $alpha: 0.15,
+  );
+$button-hover-transform-scale: 1.04;
+
+// Disabled button
+$button-disabled-cursor: default;
+$button-disabled-text-color: $gray-200;
+$button-disabled-background: $gray-500;
+$button-disabled-border-radius: 0;
+$button-disabled-border-color: $gray-500;
+
+// button sizes
+$button-extra-small: $p-small-font-size * 0.75;
+$button-small: $p-small-font-size;
+$button-default: $p-font-size;
+$button-large: $p-large-font-size;
+$button-extra-large: $p-font-size * 1.8;
+
+// 9. Button Group
+// ----------------
+$buttongroup-margin: 1rem 0;
+$buttongroup-spacing: 2.8rem;
+
+// 10. Utility maps
+// ------------------
+
+// Spacers
+// Influence paddings, margins classes etc.
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 9,
+  10: $spacer * 10,
+  11: $spacer * 11,
+  12: $spacer * 12,
+  13: $spacer * 13,
+  14: $spacer * 14,
+  15: $spacer * 15,
+  16: $spacer * 16,
+  17: $spacer * 17,
+  18: $spacer * 18,
+  19: $spacer * 19,
+  20: $spacer * 20,
+);
+
+// Sizers & widths
+// Utility for width & height classes (and for dividers)
+$sizers: (
+  auto: auto,
+  0: 0,
+  10: 10%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  40: 40%,
+  50: 50%,
+  60: 60%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  90: 90%,
+  100: 100%,
+  full: 100%,
+  min: min-content,
+  max: max-content,
+);
+
+// Borders
+$border-style: solid;
+$border-color: $gray-400;
+
+$border-width: 1px;
+$border-widths: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+);
+
+$border-radiuses: (
+  0: 0,
+  none: 0,
+  sharp: 0,
+  xs: 3px,
+  s: 6px,
+  m: 9px,
+  l: 18px,
+  xl: 27px,
+  2xl: 36px,
+  100: 100%,
+  circle: 100%,
+  rounded: 100%,
+);
+
+// Shadows
+$shadow-base-color: $black;
+$shadows: (
+  none: none,
+  xs: 0px 2px 5px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.06,
+    ),
+  s: 0px 5px 8px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.08,
+    ),
+  m: 0px 8px 15px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.08,
+    ),
+  l: 0px 12px 25px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.1,
+    ),
+  xl: 0px 18px 40px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.1,
+    ),
+  2xl: 0px 23px 70px
+    rgba(
+      $color: $shadow-base-color,
+      $alpha: 0.14,
+    ),
+);
+
+// Opacity
+$opacities: (
+  0: 0,
+  5: 0.05,
+  10: 0.1,
+  15: 0.15,
+  20: 0.2,
+  30: 0.3,
+  40: 0.4,
+  50: 0.5,
+  60: 0.6,
+  70: 0.7,
+  80: 0.8,
+  90: 0.9,
+  95: 0.95,
+  100: 1,
+  1: 1,
+  none: 1,
+);
+
+// Maps for transformations
+
+// Translate
+$translate-unit: 1rem;
+$translates: (
+  0: 0,
+  1: $translate-unit,
+  2: $translate-unit * 2,
+  3: $translate-unit * 3,
+  4: $translate-unit * 4,
+  5: $translate-unit * 5,
+  6: $translate-unit * 6,
+  7: $translate-unit * 7,
+  8: $translate-unit * 8,
+  9: $translate-unit * 9,
+  10: 10%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  40: 40%,
+  50: 50%,
+  60: 60%,
+  70: 70%,
+  75: 75%,
+  80: 80%,
+  90: 90%,
+  100: 100%,
+);
+
+// Scale
+$scales: (
+  10: 0.1,
+  20: 0.2,
+  30: 0.3,
+  40: 0.4,
+  50: 0.5,
+  60: 0.6,
+  75: 0.75,
+  80: 0.8,
+  90: 0.9,
+  100: 1,
+  110: 1.1,
+  120: 1.2,
+  130: 1.3,
+  140: 1.4,
+  150: 1.5,
+  160: 1.6,
+  170: 1.7,
+  180: 1.8,
+  190: 1.9,
+  200: 2,
+  300: 3,
+  400: 4,
+  500: 5,
+  600: 6,
+  700: 7,
+  800: 8,
+  900: 9,
+  1000: 10,
+);
+
+// Rotate
+$rotations: (
+  0: 0deg,
+  1: 1deg,
+  2: 2deg,
+  3: 3deg,
+  4: 4deg,
+  5: 5deg,
+  6: 6deg,
+  12: 12deg,
+  45: 45deg,
+  90: 90deg,
+  180: 180deg,
+);
+
+// Skew
+$skews: (
+  0: 0deg,
+  1: 1deg,
+  2: 2deg,
+  3: 3deg,
+  4: 4deg,
+  5: 5deg,
+  6: 6deg,
+  12: 12deg,
+  24: 24deg,
+  45: 45deg,
+);

@@ -1,0 +1,58 @@
+// vzdálenost
+// Tloušťka
+// šířka
+// barva - primary?
+
+//
+// SEPARATORS
+// pod nadpis nebo text - aplikovat přímo na nadpis
+.separator-left,
+.separator-center,
+.separator-right {
+  position: relative;
+  padding-bottom: $heading-separator-distance;
+}
+
+.separator-left::after,
+.separator-center::after,
+.separator-right::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: $heading-separator-width;
+  height: $heading-separator-height;
+  background-color: $heading-separator-color;
+}
+
+.separator-left::after {
+  left: 0;
+}
+
+.separator-right::after {
+  right: 0;
+}
+
+.separator-center::after {
+  left: calc(50% - 3rem);
+}
+
+//
+// DIVIDERS - Oddělovače
+// Aplikovat na samostatný div
+
+.divider,
+hr {
+  max-width: $divider-max-width;
+  border: $divider-border;
+  margin: $divider-margin;
+}
+
+// Generate dividers width widths map
+@each $value, $width in $sizers {
+  .divider-#{$value} {
+    width: $width;
+    border: $divider-border;
+    margin: $divider-margin;
+  }
+}

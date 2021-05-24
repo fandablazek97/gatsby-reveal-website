@@ -1,0 +1,234 @@
+// BUTTON COLOR VARIANTS
+
+// Basic buttons
+// -------------
+// Class example `btn-primary` - `btn-alert`
+@each $value, $color in $theme-colors {
+  .btn-#{$value} {
+    @extend .btn;
+    background-color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color, $darken-amount);
+      border-color: darken($color, $darken-amount);
+    }
+  }
+}
+
+// Base button with inverted color order
+// Class example `btn-inverse-primary` - `btn-inverse-alert`
+@each $value, $color in $theme-colors {
+  .btn-inverse-#{$value} {
+    @extend .btn;
+    background-color: darken($color, $darken-amount);
+    border-color: darken($color, $darken-amount);
+
+    &:hover,
+    &:focus {
+      background-color: $color;
+      border-color: $color;
+    }
+  }
+}
+
+// Outline buttons
+// ---------------
+// Class example `btn-outline-primary` - `btn-outline-alert`
+@each $value, $color in $theme-colors {
+  .btn-outline-#{$value} {
+    @extend .btn;
+    color: $color;
+    background-color: transparent;
+    border-width: $button-border-width;
+    border-radius: $button-border-radius;
+    border-color: $color;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $button-text-color;
+      background-color: darken($color, $darken-amount);
+      border-color: darken($color, $darken-amount);
+      border-width: $button-border-width;
+      border-radius: $button-border-radius;
+      box-shadow: none;
+    }
+  }
+}
+
+// Outline inverted buttons
+// ------------------------
+// Class example `btn-outline-inverse-primary` - `btn-outline-inverse-alert`
+@each $value, $color in $theme-colors {
+  .btn-outline-inverse-#{$value} {
+    @extend .btn;
+    color: $button-text-color;
+    background-color: $color;
+    border-color: $color;
+    border-width: $button-border-width;
+    border-radius: $button-border-radius;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: $color;
+      background-color: transparent;
+      border-color: darken($color, $darken-amount);
+      border-width: $button-border-width;
+      border-radius: $button-border-radius;
+      box-shadow: none;
+    }
+  }
+}
+
+// Slide buttons
+// -------------
+
+// Slide to right button
+// Class example `btn-slide-to-r-primary` - `btn-slide-to-r-secondary`
+@each $value, $color in $theme-colors {
+  .btn-slide-to-r-#{$value} {
+    @extend .btn;
+    color: $button-text-color;
+    background-color: $color;
+    border: none;
+    box-shadow: none;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+
+      width: 120%;
+      height: 100%;
+      background-color: darken($color, $darken-amount);
+
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: transform $global-transition-time $global-transition-easing,
+        opacity $global-transition-time * 1.7 $global-transition-easing;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: translateX(0);
+      opacity: 1;
+      box-shadow: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $button-text-color;
+      background-color: $color;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// Slide to left button
+// Class example `btn-slide-to-l-primary` - `btn-slide-to-l-secondary`
+@each $value, $color in $theme-colors {
+  .btn-slide-to-l-#{$value} {
+    @extend .btn;
+    color: $button-text-color;
+    background-color: $color;
+    border: none;
+    box-shadow: none;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+
+      width: 120%;
+      height: 100%;
+      background-color: darken($color, $darken-amount);
+
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform $global-transition-time $global-transition-easing,
+        opacity $global-transition-time * 1.7 $global-transition-easing;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: translateX(0);
+      opacity: 1;
+      box-shadow: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $button-text-color;
+      background-color: $color;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// Slide to top button
+// Class example `btn-slide-to-t-primary` - `btn-slide-to-t-secondary`
+@each $value, $color in $theme-colors {
+  .btn-slide-to-t-#{$value} {
+    @extend .btn;
+    color: $button-text-color;
+    background-color: $color;
+    border: none;
+    box-shadow: none;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+      background-color: darken($color, $darken-amount);
+
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform $global-transition-time $global-transition-easing,
+        opacity $global-transition-time * 1.7 $global-transition-easing;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: translateY(0);
+      opacity: 1;
+      box-shadow: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $button-text-color;
+      background-color: $color;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}

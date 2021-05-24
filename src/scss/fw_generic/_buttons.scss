@@ -1,0 +1,175 @@
+// Buttons
+
+// Base button
+.btn {
+  cursor: $button-cursor;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: $button-padding;
+  margin: $button-margin;
+
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  color: $button-text-color;
+  font-weight: $button-font-weight;
+  text-transform: $button-text-transform;
+  letter-spacing: $button-letter-spacing;
+  text-decoration: none !important;
+
+  border-style: $button-border-style;
+  border-width: $button-border-width;
+  border-radius: $button-border-radius;
+  border-color: $button-border-color;
+
+  background-color: $button-background;
+  box-shadow: $button-box-shadow;
+
+  transition: all $button-hover-time $button-hover-easing;
+
+  &:hover,
+  &:focus {
+    color: $button-hover-text-color;
+    background-color: $button-hover-background;
+    border-style: $button-hover-border-style;
+    border-color: $button-hover-border-color;
+    border-radius: $button-hover-border-radius;
+    box-shadow: $button-hover-box-shadow;
+
+    transform: scale($button-hover-transform-scale);
+  }
+
+  span,
+  i {
+    font-size: $button-icon-size;
+  }
+}
+
+// Icons - spacing fixes classes
+.btn-icon-left {
+  span,
+  i {
+    margin-right: $button-icon-margin;
+  }
+}
+
+.btn-icon-right {
+  span,
+  i {
+    margin-left: $button-icon-margin;
+  }
+}
+
+// Sizes - utility size classes
+.btn-extra-small,
+.btn-xs {
+  font-size: $button-extra-small;
+}
+
+.btn-small,
+.btn-s {
+  font-size: $button-small;
+}
+
+.btn-large,
+.btn-l {
+  font-size: $button-large;
+}
+
+.btn-extra-large,
+.btn-extralarge,
+.btn-xl {
+  font-size: $button-extra-large;
+}
+
+.btn-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+// Disabled button
+// .btn-disabled,
+// .btn-disabled:disabled,
+// .btn:disabled {
+//   @extend .btn;
+//   pointer-events: none;
+//   cursor: $button-disabled-cursor;
+
+//   color: $button-disabled-text-color;
+//   background-color: $button-disabled-background;
+//   border-radius: $button-disabled-border-radius;
+//   border-color: $button-disabled-border-color;
+//   box-shadow: none;
+
+//   &:hover,
+//   &:focus {
+//     color: $button-disabled-text-color;
+//     background-color: $button-disabled-background;
+//     border-color: $button-disabled-border-color;
+//     border-radius: $button-disabled-border-radius;
+//     box-shadow: none;
+//   }
+// }
+
+// Tablet
+@media (max-width: $break-tablet) {
+  .btn {
+    font-size: $button-font-size * 0.85;
+  }
+
+  // Sizes
+  .btn-extra-small,
+  .btn-xs {
+    font-size: $button-extra-small * 0.9;
+  }
+
+  .btn-small,
+  .btn-s {
+    font-size: $button-small * 0.9;
+  }
+
+  .btn-large,
+  .btn-l {
+    font-size: $button-large * 0.85;
+  }
+
+  .btn-extra-large,
+  .btn-extralarge,
+  .btn-xl {
+    font-size: $button-extra-large * 0.8;
+  }
+}
+
+// Mobile
+@media (max-width: $break-mobile) {
+  .btn {
+    font-size: $button-font-size * 0.65;
+  }
+
+  // Sizes
+  .btn-extra-small,
+  .btn-xs {
+    font-size: $button-extra-small * 0.8;
+  }
+
+  .btn-small,
+  .btn-s {
+    font-size: $button-small * 0.75;
+  }
+
+  .btn-large,
+  .btn-l {
+    font-size: $button-large * 0.65;
+  }
+
+  .btn-extra-large,
+  .btn-extralarge,
+  .btn-xl {
+    font-size: $button-extra-large * 0.6;
+  }
+}

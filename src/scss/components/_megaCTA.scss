@@ -1,0 +1,104 @@
+.mega-cta {
+  display: block;
+  width: 100%;
+  height: 560px;
+  background: $primary;
+  text-decoration: none;
+
+  position: relative;
+  z-index: 1;
+
+  span {
+    color: white;
+    font-size: 4rem;
+  }
+
+  * {
+    color: white !important;
+  }
+}
+
+.mega-cta__wrapper {
+  height: 100%;
+}
+
+// Vnitřní container
+.mega-cta__inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+// Horní nápis kurzívou
+.mega-cta__caption {
+  // font-size: 2.3rem;
+  color: white;
+}
+
+// Hlavní nadpis na tlačítku
+.mega-cta__heading {
+  margin: 0;
+}
+
+.mega-cta__arrow {
+  position: absolute;
+  display: block;
+  right: $global-wrapper-padding;
+  top: calc(50% - 2rem);
+  bottom: calc(50% - 2rem);
+}
+
+// Nastavení Hoveru celého odkazu
+
+.mega-cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: darken($color: $primary, $amount: 10%);
+  z-index: -1;
+
+  opacity: 0;
+  transform: translateX(-85%);
+
+  transition: opacity 1000ms ease, transform 680ms ease;
+}
+
+.mega-cta:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+// MEDIA QUERIES
+
+@media (max-width: $break-mobile) {
+  .mega-cta {
+    height: 370px;
+  }
+
+  .mega-cta__inner {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .mega-cta__caption {
+    font-size: 2rem;
+  }
+
+  .mega-cta__heading {
+    margin: 3rem 0;
+    font-size: 2.8rem;
+  }
+
+  .mega-cta__arrow {
+    position: static;
+  }
+}

@@ -1,0 +1,304 @@
+// TYPOGRPHY BASE
+// link
+a {
+  color: $link-color;
+  font-size: $link-font-size;
+  font-style: $link-font-style;
+  font-weight: $link-font-weight;
+  font-display: $global-font-display;
+  text-decoration: $link-text-decoration;
+  transition: color $global-transition-time $global-transition-easing;
+}
+
+a:hover,
+a:focus {
+  color: $link-hover-color;
+  text-decoration: $link-hover-text-decoration;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-style: $heading-font-style;
+  font-display: $global-font-display;
+  color: $heading-color;
+  text-transform: $heading-text-transform;
+  line-height: $heading-lineheight;
+  font-weight: $heading-font-weight;
+  margin-top: $heading-margin-top;
+  margin-bottom: $heading-margin-bottom;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+.h1 {
+  @extend h1;
+}
+
+.h2 {
+  @extend h2;
+}
+
+.h3 {
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.h5 {
+  @extend h5;
+}
+
+.h6 {
+  @extend h6;
+}
+
+// Custom font sizes
+.xl,
+.text-xl,
+.hxl,
+.h-xl {
+  @extend h1;
+  font-size: $xl-font-size;
+}
+
+.xxl,
+.text-xxl,
+.hxxl,
+.h-xxl {
+  @extend h1;
+  font-size: $xxl-font-size;
+}
+
+// Paragraph
+p {
+  max-width: $paragraph-max-width;
+  font-family: $paragraph-font-family;
+  font-size: $p-font-size;
+  font-weight: $paragraph-font-weight;
+  font-style: $paragraph-font-style;
+  font-display: $global-font-display;
+  text-transform: $paragraph-text-transform;
+  line-height: $paragraph-lineheight;
+  color: $paragraph-color;
+  margin-top: $paragraph-margin-top;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+.p {
+  @extend p;
+}
+
+// Helper classes
+.lead {
+  font-family: $lead-font-family;
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  font-style: $lead-font-style;
+  font-display: $global-font-display;
+  line-height: $lead-lineheight;
+  color: $lead-color;
+  margin-top: $lead-margin-top;
+  margin-bottom: $lead-margin-bottom;
+}
+
+.text-small,
+.p-small,
+.small {
+  font-size: $p-small-font-size;
+}
+
+.text-large,
+.p-large,
+.large {
+  font-size: $p-large-font-size;
+}
+
+// Fonts families
+.font-primary {
+  font-family: $font-family-primary;
+}
+
+.font-secondary {
+  font-family: $font-family-secondary;
+}
+
+.font-sans {
+  font-family: $font-family-sans, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.font-serif {
+  font-family: $font-family-serif, ui-serif, Georgia, Cambria, "Times New Roman",
+    Times, serif;
+}
+
+.font-mono {
+  font-family: $font-family-mono, ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+// // ALL Type on Tablet only
+@media (max-width: $break-tablet) {
+  body {
+    font-size: $body-font-size;
+  }
+
+  h1 {
+    font-size: $h1-font-size * 0.8;
+  }
+
+  h2 {
+    font-size: $h2-font-size * 0.8;
+  }
+
+  h3 {
+    font-size: $h3-font-size * 0.8;
+  }
+
+  h4 {
+    font-size: $h4-font-size * 0.9;
+  }
+
+  h5 {
+    font-size: $h5-font-size * 0.9;
+  }
+
+  h6 {
+    font-size: $h6-font-size;
+  }
+
+  p {
+    font-size: $p-font-size;
+  }
+
+  // Custom font sizes
+  .xl,
+  .text-xl,
+  .hxl,
+  .h-xl {
+    font-size: $xl-font-size * 0.85;
+  }
+
+  .xxl,
+  .text-xxl,
+  .hxxl,
+  .h-xxl {
+    font-size: $xxl-font-size * 0.85;
+  }
+
+  // Helpers
+  .lead {
+    font-size: $lead-font-size;
+  }
+
+  .text-small,
+  .p-small,
+  .small {
+    font-size: $p-small-font-size;
+  }
+
+  .text-large,
+  .p-large,
+  .large {
+    font-size: $p-large-font-size * 0.95;
+  }
+}
+
+// // ALL Type on mobile only
+@media (max-width: $break-mobile) {
+  body {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.7rem;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  h6 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  // Custom font sizes
+  .xl,
+  .text-xl,
+  .hxl,
+  .h-xl {
+    font-size: 4rem;
+  }
+
+  .xxl,
+  .text-xxl,
+  .hxxl,
+  .h-xxl {
+    font-size: 7rem;
+  }
+
+  // Helpers
+  .lead {
+    font-size: 2rem;
+  }
+
+  .text-small,
+  .p-small,
+  .small {
+    font-size: 1.15rem;
+  }
+
+  .text-large,
+  .p-large,
+  .large {
+    font-size: 1.4rem;
+  }
+}

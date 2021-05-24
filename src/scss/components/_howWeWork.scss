@@ -1,0 +1,23 @@
+.process__number {
+  height: 10rem;
+  max-width: 12rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+
+  img {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.process__heading {
+  font-weight: 600;
+}
+
+@media (max-width: $break-mobile) {
+  .process__number {
+    height: 7rem;
+    max-width: 8.4rem;
+    margin-bottom: 3rem;
+  }
+}

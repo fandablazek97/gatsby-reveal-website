@@ -1,29 +1,93 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
+// Components
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+import CoverHome from "../Components/CoverHome";
+import AboutSection from "../components/AboutSection";
+import Card from "../components/Card";
+import LogosSix from "../components/LogosSix";
 
-export default IndexPage
+import TGoldenGate from "../components/TGoldenGate";
+import THooters from "../components/THooters";
+import TCosuma from "../components/TCosuma";
+// import TRightDefault from "../components/TRightDefault";
+// import TLeftDefault from "../components/TLeftDefault";
+
+import HowWeWorkSection from "../components/HowWeWorkSection";
+import MegaCTA from "../components/MegaCTA";
+
+// Assets
+// Logos - in logo component
+import tech1 from "../images/svg-ref/hooters-black.svg";
+import tech2 from "../images/svg-ref/golden-gate-black.svg";
+import tech3 from "../images/svg-ref/image-pro-black.svg";
+import tech4 from "../images/svg-ref/2p-gastro-height-black.svg";
+import tech5 from "../images/svg-ref/kozacky-med-black.svg";
+import tech6 from "../images/svg-ref/foto-fest-black.svg";
+
+// icons - in cards
+import websitesIcon from "../images/svg-icons/icon-1.svg";
+import graphicsIcon from "../images/svg-icons/icon-2.svg";
+import marketingIcon from "../images/svg-icons/icon-3.svg";
+
+
+
+export default function IndexPage() {
+  return (
+      <>
+          <Helmet
+             bodyAttributes={{
+                class: 'scroll-smooth'
+            }}
+          />
+      
+      <Layout>
+        <Seo title="Digitální agentura"></Seo>
+
+        <CoverHome></CoverHome>
+
+        <AboutSection>
+          <Card
+            path="/weby"
+            icon={websitesIcon}
+            title="Weby & E-shopy"
+          ></Card>
+
+          <Card
+            path="/grafika"
+            icon={graphicsIcon}
+            title="Grafika & branding"
+          ></Card>
+
+          <Card
+            path="/marketing"
+            icon={marketingIcon}
+            title="Online marketing"
+          ></Card>
+        </AboutSection>
+
+        <LogosSix 
+              title="Naši klienti" 
+              subtitle="Spolupracujeme s firmami všech velikostí i zaměření.  Podívejte se na několik vybraných z nich se kterými jsme spolupracovali."
+              logo1={tech1}
+              logo2={tech2}
+              logo3={tech3}
+              logo4={tech4}
+              logo5={tech5}
+              logo6={tech6}
+        ></LogosSix>
+
+        <TGoldenGate></TGoldenGate>
+        <THooters></THooters>
+        <TCosuma></TCosuma>
+
+        <HowWeWorkSection></HowWeWorkSection>
+        <MegaCTA></MegaCTA>
+    </Layout>
+    </>
+  )
+}
+

@@ -1,0 +1,8 @@
+// Box shadow utility classes
+
+// Shadows
+@each $value, $shadow in $shadows {
+  .shadow-#{$value} {
+    box-shadow: $shadow;
+  }
+}

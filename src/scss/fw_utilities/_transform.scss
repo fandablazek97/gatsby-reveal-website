@@ -1,0 +1,91 @@
+// Transform utility classes
+
+// Transform disabled
+.transform-none {
+  transform: none;
+}
+
+// Transform MAPS
+
+// Translate
+@each $value, $translate in $translates {
+  // Translate in X axis
+  .translate-x-#{$value} {
+    transform: translateX($translate);
+  }
+  .-translate-x-#{$value} {
+    transform: translateX(-$translate);
+  }
+
+  // Translate in Y axis
+  .translate-y-#{$value} {
+    transform: translateY($translate);
+  }
+  .-translate-y-#{$value} {
+    transform: translateY(-$translate);
+  }
+}
+
+// Scale
+@each $value, $scale in $scales {
+  .scale-#{$value} {
+    transform: scale($scale);
+  }
+}
+
+// Rotate
+@each $value, $rotate in $rotations {
+  .rotate-#{$value} {
+    transform: rotate($rotate);
+  }
+  .-rotate-#{$value} {
+    transform: rotate(-$rotate);
+  }
+}
+
+// Skew
+@each $value, $skew in $skews {
+  .skew-#{$value} {
+    transform: rotate($skew);
+  }
+  .-skew-#{$value} {
+    transform: rotate(-$skew);
+  }
+}
+
+// Transform origin utilities
+.origin-center {
+  transform-origin: center;
+}
+
+.origin-top {
+  transform-origin: top;
+}
+
+.origin-top-right {
+  transform-origin: top right;
+}
+
+.origin-right {
+  transform-origin: right;
+}
+
+.origin-bottom-right {
+  transform-origin: bottom right;
+}
+
+.origin-bottom {
+  transform-origin: bottom;
+}
+
+.origin-bottom-left {
+  transform-origin: bottom left;
+}
+
+.origin-left {
+  transform-origin: left;
+}
+
+.origin-top-left {
+  transform-origin: top left;
+}

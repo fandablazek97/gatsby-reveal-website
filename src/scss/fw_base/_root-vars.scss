@@ -1,0 +1,18 @@
+// COLORS CSS Custom variables
+
+:root {
+  // Grays
+  @each $value, $color in $grays {
+    --color-gray-#{$value}: #{$color};
+  }
+
+  // colors
+  @each $value, $color in $colors {
+    --color-#{$value}: #{$color};
+  }
+
+  // theme colors
+  @each $value, $color in $theme-colors {
+    --color-#{$value}: #{$color};
+  }
+}

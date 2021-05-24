@@ -1,0 +1,65 @@
+// Border - utility classes
+// Base
+.border,
+.border-default {
+  border: $border-width $border-style $border-color;
+}
+
+.border-top,
+.border-t {
+  border-top: $border-width $border-style $border-color;
+}
+
+.border-right,
+.border-r {
+  border-right: $border-width $border-style $border-color;
+}
+
+.border-bottom,
+.border-b {
+  border-bottom: $border-width $border-style $border-color;
+}
+
+.border-left,
+.border-l {
+  border-left: $border-width $border-style $border-color;
+}
+
+.border-x {
+  border-left: $border-width $border-style $border-color;
+  border-right: $border-width $border-style $border-color;
+}
+
+.border-y {
+  border-top: $border-width $border-style $border-color;
+  border-bottom: $border-width $border-style $border-color;
+}
+
+// Style of borders
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+// Utility
+// Tloušťky rámečků - hodnoty border-w-* .... * = číslo 1 - 5
+@each $value, $border-width in $border-widths {
+  .border-w-#{$value} {
+    border-radius: $border-width;
+  }
+}
+
+// Zaoblení rámečků - hodnoty raduis-* .... xs, s, m, l.... 2xl
+@each $value, $border-radius in $border-radiuses {
+  .radius-#{$value} {
+    border-radius: $border-radius;
+  }
+}

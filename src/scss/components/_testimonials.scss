@@ -1,0 +1,146 @@
+.testimonial {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  // min-height: 90rem;
+}
+
+// MODIFIERS of base testimonial class
+// Change position of image to left side
+.testimonial--img-left {
+  flex-direction: row-reverse;
+}
+
+// Change text to dark colors if background is light
+.testimonial--text-black {
+  .testimonial__content {
+    p {
+      color: $paragraph-color;
+    }
+
+    .lead {
+      color: $lead-color;
+    }
+
+    li {
+      color: $paragraph-color;
+      background-color: rgba($white, $alpha: 0.7);
+    }
+  }
+}
+
+// Change image to full height and fixes content
+.testimonial--image-full-height {
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  .testimonial__image {
+    min-height: 80rem;
+    padding-top: 5rem;
+    padding-bottom: 0;
+    position: relative;
+
+    img,
+    picture {
+      width: auto;
+      max-height: 100%;
+
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+// Testimonial base styles
+// Base Content
+.testimonial__content {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  p,
+  .lead {
+    color: $gray-100;
+  }
+}
+
+.testimonial__logo {
+  max-width: 21rem;
+  max-height: 16rem;
+  padding-bottom: 6rem;
+
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.testimonial__list {
+  margin-top: 3rem;
+  margin-bottom: 0;
+
+  li {
+    margin-right: 1em;
+    padding: 0.6em 1.3em;
+    background-color: rgba($gray-800, $alpha: 0.35);
+
+    font-size: 1.4rem;
+    color: $gray-200;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+}
+
+// Image
+.testimonial__image {
+  overflow: visible;
+
+  img,
+  picture {
+    max-width: 100%;
+    height: auto;
+
+    transform: scale(1.2) !important;
+  }
+}
+
+// Media Queries
+// Adjust text padding on larger screens with image on right side
+@media (min-width: $break-tablet) {
+  .testimonial--img-left {
+    flex-direction: row-reverse;
+
+    .testimonial__content {
+      padding-left: 7rem;
+    }
+  }
+}
+
+// Adjust text padding on larger screens with image on right side
+@media (max-width: $break-tablet) {
+  .testimonial__logo {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img,
+    picture {
+      max-width: 100%;
+    }
+  }
+
+  .testimonial__list {
+    margin-top: 2rem;
+
+    li {
+      padding: 0.4em 1em;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// ID konkrétních log v konkrétních referencích
+#cosuma-logo {
+  max-width: 40rem;
+  max-height: 16rem;
+}
