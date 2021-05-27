@@ -18,16 +18,16 @@
 // ---------
 $white: white;
 $gray-50: hsl(225, 10%, 98%);
-$gray-100: hsl(225, 8%, 93%);
+$gray-100: hsl(225, 8%, 94%);
 $gray-200: hsl(225, 10%, 90%);
 $gray-300: hsl(225, 8%, 85%);
 $gray-400: hsl(225, 5%, 78%);
 $gray-500: hsl(225, 5%, 68%);
-$gray-600: hsl(225, 3%, 37%);
+$gray-600: hsl(225, 3%, 33%);
 $gray-700: hsl(225, 3%, 25%);
-$gray-800: hsl(225, 3%, 15%);
-$gray-900: hsl(225, 8%, 8%);
-$gray-950: hsl(225, 8%, 4%);
+$gray-800: hsl(230, 5%, 15%);
+$gray-900: hsl(230, 10%, 8%);
+$gray-950: hsl(230, 15%, 4%);
 $black: black;
 
 $grays: (
@@ -50,8 +50,8 @@ $violet: #601ad7;
 $purple: #7149b7;
 $pink: #dc3a8b;
 $red: #f50c24;
-$orange: #ff6118;
-$yellow: #efaf0e;
+$orange: #df4f0c;
+$yellow: #d48f0e;
 $green: #14a045;
 $teal: #1ec1c4;
 $cyan: #0dbff0;
@@ -67,9 +67,10 @@ $colors: (
   green: $green,
   teal: $teal,
   cyan: $cyan,
+  dark-violet: #322560,
   white: $white,
   gray: $gray-500,
-  gray-dark: $gray-800,
+  dark-gray: $gray-800,
   black: $black,
 );
 
@@ -129,7 +130,7 @@ $global-wrapper-padding: calc(
 
 // Breakpoints
 $break-mobile: 570px;
-$break-tablet: 980px;
+$break-tablet: 1050px;
 $break-large: 2100px;
 
 // 4. Grid
@@ -208,7 +209,7 @@ $link-hover-text-decoration: none;
 $p-small-font-size: $p-font-size * 0.8;
 $p-large-font-size: $p-font-size * 1.15;
 
-$lead-font-size: $p-font-size * 1.5;
+$lead-font-size: $p-font-size * 1.3;
 $lead-font-family: $font-family-secondary;
 $lead-font-weight: 100;
 $lead-font-style: normal;
@@ -236,7 +237,7 @@ $hr-margin: $divider-margin;
 // --------
 $list-lineheight: $paragraph-lineheight;
 $list-style-position: inside;
-$list-margin-left: 0;
+$list-margin-left: 2rem;
 $list-margin-top: 0;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-font-weight: $body-font-weight;
@@ -440,6 +441,18 @@ $opacities: (
   none: 1,
 );
 
+// Flexbox gap
+$gap-unit: 1rem;
+$gaps: (
+  0: 0,
+  1: $gap-unit,
+  2: $gap-unit * 2,
+  3: $gap-unit * 3,
+  4: $gap-unit * 4,
+  5: $gap-unit * 5,
+  6: $gap-unit * 6,
+);
+
 // Maps for transformations
 
 // Translate
@@ -528,4 +541,27 @@ $skews: (
   12: 12deg,
   24: 24deg,
   45: 45deg,
+);
+
+// Z-index utility Map
+$z-indexes: (
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  10: 10,
+  20: 20,
+  30: 30,
+  40: 40,
+  50: 50,
+  100: 100,
+  500: 500,
+  1000: 1000,
+  auto: auto,
 );

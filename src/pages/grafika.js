@@ -7,11 +7,11 @@ import Seo from "../components/seo";
 // import Cover from "../components/Cover";
 import CoverGraphics from "../components/CoverGraphics";
 import TextGray from "../components/TextGray";
-import WeDoSectionSix from "../Components/WeDoSectionSix";
+import WeDoSection from "../Components/WeDoSection";
+import WeDoSectionItem from "../Components/WeDoSectionItem";
 
-import TGoldenGate from "../components/TGoldenGate";
-import THooters from "../components/THooters";
-import TCosuma from "../components/TCosuma";
+import TEventReality from "../components/TEventReality";
+import TMely from "../components/TMely";
 
 import LogosSix from "../components/LogosSix";
 import NextServicesSection from "../components/NextServicesSection";
@@ -50,28 +50,37 @@ export default function GrafikaPage() {
         subtitle="Branding není pouze logo vaší firmy. Skrývá se v něm mnohem více… Vzpomeňte si třeba na firmy jako Apple nebo Coca Cola. V brandu těchto firem se skrývá vize, mise i vášeň pro jejich produkty. Proto vhodně a moderně vytvořený vizuál firmy je další krok do světa úspěšného podnikání. Použijte svůj brand jako záruku kvality."
       ></TextGray>
 
-      <WeDoSectionSix 
-        titlelist1="Tvorba vizuální identity" subtitlelist1="Kompletní vizuální styl pro vaši značku obsahující veškeré komponenty jako je logo v různých variantách, typografie, barevné schéma, ilustrace nebo fotografie. Vše v přehledném PDF s návodam, jak styl správně používat."
-        titlelist2="tvorba tiskovin" subtitlelist2="Veškeré reklamní a upomínkové předměty jako jsou vizitky, letáky, slevové vouchery atd. Vše graficky navrhneme a případně i vyrobíme. Nemusíte se o nic starat."
-        titlelist3="fotografie" subtitlelist3="Propagační fotografie Vaší služby, produktů na eshop nebo na sociální sítě, případně i firemní portréty lidí ve Vaší firmě."
-        titlelist4="video" subtitlelist4="Zvládneme super Stories natočené na iPhone. Ale taky Profesionální reklamní spot, u kterého se divák nebude nudit."
-        titlelist5="Tisk a velkoplošný tisk" subtitlelist5="Navržené materiály u našich dodavatelů necháme vyrobit a přivezeme vám je. Ať už potřebujete 500 letáků, billboardy pro celé město, polepit výlohu či firemní vozy."
-        titlelist6="3D vizualizace" subtitlelist6="Potřebujete vidět produkt který ještě fyzicky nemáte nebo není možné jej jinak zachytit? Máte plány budovy a potřebujete ukázat klientům, jak bude vypadat až bude postavená? Vdechneme život vašim představám."
-      ></WeDoSectionSix>
+      <WeDoSection>
+        <WeDoSectionItem title="Tvorba loga a vizuální identity" subtitle="Kompletní vizuální styl pro vaši značku obsahující veškeré komponenty jako je logo v různých variantách, typografie, barevné schéma, ilustrace nebo fotografie. Vše v přehledném PDF s návodam, jak styl správně používat."/>
 
-      <TGoldenGate></TGoldenGate>
-      <THooters></THooters>
-      <TCosuma></TCosuma>
+        <WeDoSectionItem title="Tvorba tiskovin" subtitle="Veškeré reklamní a upomínkové předměty jako jsou vizitky, letáky, slevové vouchery atd. Vše graficky navrhneme a případně i vyrobíme. Nemusíte se o nic starat."/>
 
-    <LogosSix 
+        <WeDoSectionItem title="Fotografie" subtitle="Propagační fotografie Vaší služby, produktů na eshop nebo na sociální sítě, případně i firemní portréty lidí ve Vaší firmě. Představivosti se meze nekladou."/>
+
+        <WeDoSectionItem title="Video" subtitle="Zvládneme super Stories natočené na iPhone. Ale taky Profesionální, minutu až tři dlouhý reklamní spot, u kterého se divák nebude nudit."/>
+
+        <WeDoSectionItem title="Tisk a velkoplošný tisk" subtitle="Navržené materiály u našich dodavatelů necháme vyrobit a přivezeme vám je. Ať už potřebujete 500 letáků, billboardy pro celé město, polepit výlohu či firemní vozy."/>
+
+        <WeDoSectionItem title="3D vizualizace" subtitle="Potřebujete vidět produkt který ještě fyzicky nemáte nebo není možné jej jinak zachytit? Máte plány budovy a potřebujete ukázat klientům, jak bude vypadat až bude postavená? Vdechneme život vašim představám."/>
+      </WeDoSection>
+
+      <TMely></TMely>
+      <TEventReality></TEventReality>
+
+      <LogosSix 
         title="Nástroje které používáme" 
-        subtitle=""
         logo1={tech1}
+        alt1="Adobe Photoshop"
         logo2={tech2}
+        alt2="Adobe XD"
         logo3={tech3}
+        alt3="Adobe Indesign"
         logo4={tech4}
+        alt4="Blender"
         logo5={tech5}
+        alt5="Adobe Illustrator"
         logo6={tech6}
+        alt6="Adobe Premiere Pro"
     ></LogosSix>
 
     <NextServicesSection>

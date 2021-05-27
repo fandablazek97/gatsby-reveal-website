@@ -26,7 +26,7 @@ export default function CoverWebsites() {
             <div className="cover__hero-overlay"></div>
                 
             <StaticImage 
-                    src="../images/img-base/weby.jpg"
+                    src="../images/img-base/websites-cover-4.jpg"
                     alt="Úvodní fotka stránky"
                     className="cover__hero"
                     objectFit="cover"

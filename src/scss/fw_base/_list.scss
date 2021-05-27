@@ -30,6 +30,16 @@ ol {
   list-style-position: outside;
 }
 
+.list-no-margin-left {
+  margin-left: 0;
+}
+
+.list-no-margin {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 // List style
 .list-none {
   list-style-type: none;

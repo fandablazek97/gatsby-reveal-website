@@ -1,6 +1,6 @@
 .testimonial {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 11rem;
+  padding-bottom: 11rem;
   // min-height: 90rem;
 }
 
@@ -76,11 +76,12 @@
 .testimonial__list {
   margin-top: 3rem;
   margin-bottom: 0;
+  margin-left: 0;
 
   li {
     margin-right: 1em;
     padding: 0.6em 1.3em;
-    background-color: rgba($gray-800, $alpha: 0.35);
+    background-color: rgba($gray-950, $alpha: 0.25);
 
     font-size: 1.4rem;
     color: $gray-200;
@@ -117,6 +118,11 @@
 
 // Adjust text padding on larger screens with image on right side
 @media (max-width: $break-tablet) {
+  .testimonial {
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+  }
+
   .testimonial__logo {
     align-self: center;
     display: flex;

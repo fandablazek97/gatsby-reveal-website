@@ -64,7 +64,7 @@ export default function CoverHome() {
                 <img src={image} alt="Cover"/>
             </div> */}
             <StaticImage 
-                    src="../images/img-base/home-page.jpg"
+                    src="../images/img-base/homepage-3.jpg"
                     alt="Úvodní fotka webu"
                     className="cover__hero"
                     objectFit="cover"

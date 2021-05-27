@@ -46,7 +46,7 @@ export default function Navbar() {
     const menuScrollToggle = () => {
         if (isBrowser) {
 
-            if (window.scrollY < 100) {
+            if (window.scrollY < 60) {
                 setMenuScroll(false);
             } else {
                 setMenuScroll(true);

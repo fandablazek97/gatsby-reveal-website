@@ -19,7 +19,7 @@ export default function THooters() {
     const [ref, reveal] = useScrollSecond();
 
     return (
-       <section className="testimonial bg-gradient-to-r-orange grid wrap-fluid">
+       <section className="testimonial bg-orange grid wrap-fluid">
             <motion.div ref={element} variants={fade} animate={controls} initial="hidden" className="testimonial__content cell l-6 m-12 s-12 y-flex-center">
                 <motion.div variants={fadeItem} className="testimonial__logo">
                     <img src={logo} alt=""></img>

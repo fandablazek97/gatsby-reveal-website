@@ -3,7 +3,7 @@ import {Link} from "gatsby";
 
 export default function MegaCTA() {
     return (
-        <Link className="mega-cta" to="/contact">
+        <Link className="mega-cta" to="/kontakt">
             <div className="mega-cta__wrapper wrap">
                 <div className="mega-cta__inner px-2">
                     <p className="mega-cta__caption lead font-primary fw-400">Zaujalo vás to?</p>

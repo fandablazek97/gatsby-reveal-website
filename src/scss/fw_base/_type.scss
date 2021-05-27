@@ -143,38 +143,8 @@ p {
   font-size: $p-large-font-size;
 }
 
-// Fonts families
-.font-primary {
-  font-family: $font-family-primary;
-}
-
-.font-secondary {
-  font-family: $font-family-secondary;
-}
-
-.font-sans {
-  font-family: $font-family-sans, ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
-}
-
-.font-serif {
-  font-family: $font-family-serif, ui-serif, Georgia, Cambria, "Times New Roman",
-    Times, serif;
-}
-
-.font-mono {
-  font-family: $font-family-mono, ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
 // // ALL Type on Tablet only
 @media (max-width: $break-tablet) {
-  body {
-    font-size: $body-font-size;
-  }
-
   h1 {
     font-size: $h1-font-size * 0.8;
   }
@@ -196,11 +166,12 @@ p {
   }
 
   h6 {
-    font-size: $h6-font-size;
+    font-size: $h6-font-size * 0.9;
   }
 
-  p {
-    font-size: $p-font-size;
+  p,
+  body {
+    font-size: $p-font-size * 0.9;
   }
 
   // Custom font sizes
@@ -215,33 +186,29 @@ p {
   .text-xxl,
   .hxxl,
   .h-xxl {
-    font-size: $xxl-font-size * 0.85;
+    font-size: $xxl-font-size * 0.8;
   }
 
   // Helpers
   .lead {
-    font-size: $lead-font-size;
+    font-size: $lead-font-size * 0.9;
   }
 
   .text-small,
   .p-small,
   .small {
-    font-size: $p-small-font-size;
+    font-size: $p-small-font-size * 0.9;
   }
 
   .text-large,
   .p-large,
   .large {
-    font-size: $p-large-font-size * 0.95;
+    font-size: $p-large-font-size * 0.9;
   }
 }
 
 // // ALL Type on mobile only
 @media (max-width: $break-mobile) {
-  body {
-    font-size: 1.3rem;
-  }
-
   h1 {
     font-size: 2.6rem;
   }
@@ -266,8 +233,9 @@ p {
     font-size: 1.3rem;
   }
 
-  p {
-    font-size: 1.3rem;
+  p,
+  body {
+    font-size: 1.35rem;
   }
 
   // Custom font sizes
@@ -287,7 +255,7 @@ p {
 
   // Helpers
   .lead {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .text-small,
@@ -299,6 +267,6 @@ p {
   .text-large,
   .p-large,
   .large {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
 }

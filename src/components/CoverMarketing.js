@@ -26,11 +26,11 @@ export default function CoverWebsites() {
             <div className="cover__hero-overlay"></div>
                 
             <StaticImage 
-                    src="../images/img-base/marketing-2.jpeg"
+                    src="../images/img-base/online-marketing-1.jpg"
                     alt="Úvodní fotka stránky"
                     className="cover__hero"
                     objectFit="cover"
-                    objectPosition="50% 50%"
+                    objectPosition="60% 50%"
                     formats={["AUTO", "WEBP", "AVIF", "JPG"]}
                     placeholder="dominantColor"
                 />

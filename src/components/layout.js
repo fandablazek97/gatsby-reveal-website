@@ -35,10 +35,10 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Navbar></Navbar>
-        <CookiesBar></CookiesBar>
-        <CtaButton></CtaButton>
         <main>{children}</main>
        <Footer></Footer>
+       <CtaButton></CtaButton>
+       <CookiesBar></CookiesBar>
     </div>
   )
 }

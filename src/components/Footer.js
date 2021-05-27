@@ -42,7 +42,7 @@ export default function Footer() {
             <div className="grid wrap py-3">
                 <div className="footer__copyright cell l-12 m-12 s-12">
                     <ul className="list-inline">
-                        <li><p className="p-small">Copyright C 2021 Reveal</p></li>
+                        <li><p className="p-small">Copyright © 2021 Reveal</p></li>
                         <li><Link to="/gdpr" className="p-small">Zpracování osobních údajů</Link></li>
                     </ul>
                 </div>

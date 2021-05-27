@@ -1,5 +1,32 @@
 // Typography utility and helper classes for text formating
 
+// Fonts families
+.font-primary {
+  font-family: $font-family-primary;
+}
+
+.font-secondary {
+  font-family: $font-family-secondary;
+}
+
+.font-sans {
+  font-family: $font-family-sans, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.font-serif {
+  font-family: $font-family-serif, ui-serif, Georgia, Cambria, "Times New Roman",
+    Times, serif;
+}
+
+.font-mono {
+  font-family: $font-family-mono, ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+// Font styles
 .italic {
   font-style: italic;
 }
@@ -96,6 +123,21 @@ strong,
 }
 
 // Alignment
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+
 .left {
   text-align: left;
   align-self: flex-start;
@@ -119,6 +161,21 @@ strong,
 // Responsive alignment
 // Desktop only
 @media (min-width: $break-large) {
+  .l-text-left {
+    text-align: left;
+  }
+
+  .l-text-right {
+    text-align: right;
+  }
+
+  .l-text-center {
+    text-align: center;
+  }
+  .l-text-justify {
+    text-align: justify;
+  }
+
   .l-left {
     text-align: left;
     align-self: flex-start;
@@ -142,6 +199,21 @@ strong,
 
 // Tablet only
 @media (max-width: $break-tablet) {
+  .m-text-left {
+    text-align: left;
+  }
+
+  .m-text-right {
+    text-align: right;
+  }
+
+  .m-text-center {
+    text-align: center;
+  }
+  .m-text-justify {
+    text-align: justify;
+  }
+
   .m-left {
     text-align: left;
     align-self: flex-start;
@@ -165,6 +237,21 @@ strong,
 
 // Mobile only
 @media (max-width: $break-mobile) {
+  .s-text-left {
+    text-align: left;
+  }
+
+  .s-text-right {
+    text-align: right;
+  }
+
+  .s-text-center {
+    text-align: center;
+  }
+  .s-text-justify {
+    text-align: justify;
+  }
+
   .s-left {
     text-align: left;
     align-self: flex-start;

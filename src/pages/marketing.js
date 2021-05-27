@@ -7,7 +7,8 @@ import Seo from "../components/seo";
 // import Cover from "../components/Cover";
 import CoverMarketing from "../components/CoverMarketing";
 import TextGray from "../components/TextGray";
-import WeDoSectionFour from "../Components/WeDoSectionFour";
+import WeDoSection from "../Components/WeDoSection";
+import WeDoSectionItem from "../Components/WeDoSectionItem";
 
 import TGoldenGate from "../components/TGoldenGate";
 import THooters from "../components/THooters";
@@ -51,12 +52,15 @@ export default function MarketingPage() {
         subtitle="Vítejte ve světě neomezených možností. Začít propagovat produkt či službu pomocí sociálních sítí je nejsnazší cesta k získání prvních zákazníků. Věřte nebo ne ale Facebook používá bezmála 3 miliardy uživatelů. A kde jinde najdete tolik potenciálních zákazníků?"
       ></TextGray>
 
-      <WeDoSectionFour 
-        titlelist1="správa sociálních sítí" subtitlelist1="Postaráme se kompletně o Vaše sociální sítě. Specializujeme se především na Facebook a Instagram. Navrhneme komunikaci, obsahovou strategii, vytvoříme obsah i publikační plán. "
-        titlelist2="příprava online kampaně" subtitlelist2="Nevíte si rady s tím kde a jak na internetu oslovovat vaše zákazníky? Pomůžeme Vám s kompletní přípravou online kampaně."
-        titlelist3="PPC reklamy" subtitlelist3="Pomocí vhodně nastavené PPC reklamy přivedeme na webové stránky relevantní uživatele."
-        titlelist4="Výkonnostní marketing" subtitlelist4="Pomocí optimalizace pro vyhledávače zvýšíte návštěvnost vašeho webu z organického vyhledávání. Vždy pamatujte že, SEO je investice do budoucna!"
-      ></WeDoSectionFour>
+      <WeDoSection> 
+        <WeDoSectionItem title="Správa sociálních sítí" subtitle="Postaráme se kompletně o Vaše sociální sítě. Specializujeme se především na Facebook a Instagram, ale zvládneme i jiné.  Od návrhu content planu až po postování příspěvků nebo nastavení reklamy. O vaše sociální sítě bude postaráno."/>
+
+        <WeDoSectionItem title="Příprava online kampaně" subtitle="Nevíte si rady s tím kde a jak na internetu oslovovat vaše zákazníky? Pomůžeme Vám s kompletní přípravou online kampaně."/>
+
+        <WeDoSectionItem title="PPC reklamy" subtitle="Pomocí vhodně nastavené PPC reklamy přivedeme na webové stránky relevantní uživatele."/>
+
+        <WeDoSectionItem title="SEO" subtitle="Pomocí optimalizace pro vyhledávače zvýšíte návštěvnost vašeho webu z organického vyhledávání. Vždy pamatujte že, SEO je investice do budoucna!"/>
+      </WeDoSection>
 
       <TGoldenGate></TGoldenGate>
       <THooters></THooters>
@@ -64,13 +68,18 @@ export default function MarketingPage() {
 
     <LogosSix 
         title="Nástroje které používáme" 
-        subtitle=""
         logo1={tech1}
+        alt1="Google Analytics"
         logo2={tech2}
+        alt2="Sklik"
         logo3={tech3}
+        alt3="Yoast"
         logo4={tech4}
+        alt4="Facebook pixel"
         logo5={tech5}
+        alt5="Shoptet"
         logo6={tech6}
+        alt6="Google Ads"
     ></LogosSix>
 
     <NextServicesSection>

@@ -34,7 +34,7 @@ export default function TGoldenGate() {
             <motion.div ref={ref} variants={fade} animate={reveal} initial="hidden" className="testimonial__image cell l-6 m-12 s-12 container-img">
                 {/* <img src={image} alt="showreel"></img> */}
                 <StaticImage 
-                    src="../images/img-ref/website-golden-gate-5.png"
+                    src="../images/img-ref/website-golden-gate-v2.png"
                     alt="ukázka naší práce pro golden gate"
                     className="overflow-visible"
                     formats={["auto", "webp", "avif", "png"]}

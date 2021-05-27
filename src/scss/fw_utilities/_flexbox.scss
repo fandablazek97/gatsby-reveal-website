@@ -265,14 +265,14 @@
 }
 
 // Gap utilities
-@each $class, $spacer in $spacers {
+@each $class, $gap in $gaps {
   .gap-#{$class} {
-    gap: $spacer;
+    gap: $gap;
   }
   .gap-x-#{$class} {
-    column-gap: $spacer;
+    column-gap: $gap;
   }
   .gap-y-#{$class} {
-    row-gap: $spacer;
+    row-gap: $gap;
   }
 }

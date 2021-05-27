@@ -2,9 +2,10 @@
 .socials {
   list-style: none;
   display: flex;
+  margin-left: 0;
 
   li {
-    margin-right: 2em;
+    margin-right: 2.3em;
   }
 
   a {
@@ -26,10 +27,10 @@
 @media (max-width: $break-mobile) {
   .socials {
     li {
-      margin-right: 2.1rem;
+      margin-right: 2.7rem;
     }
     a {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
     }
   }
 }

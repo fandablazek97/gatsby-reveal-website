@@ -7,10 +7,12 @@ import Seo from "../components/seo";
 // import Cover from "../components/Cover";
 import CoverWebsites from "../components/CoverWebsites";
 import TextGray from "../components/TextGray";
-import WeDoSectionFour from "../Components/WeDoSectionFour";
+import WeDoSection from "../Components/WeDoSection";
+import WeDoSectionItem from "../Components/WeDoSectionItem";
 
-import TGoldenGate from "../components/TGoldenGate";
+import TKozackyMed from "../components/TKozackyMed";
 import THooters from "../components/THooters";
+import TGoldenGate from "../components/TGoldenGate";
 import TCosuma from "../components/TCosuma";
 
 import HowWeWorkSection from "../components/HowWeWorkSection";
@@ -54,16 +56,23 @@ export default function WebyPage() {
         subtitle="Webová stránka je ve většině případů první kontakt zákazníka s Vaším podnikáním. A jelikož se dnes už nepodniká stejně jako v divokých devadesátkách, mít správně udělanou webovou prezentaci je naprostý základ."
       ></TextGray>
 
-      <WeDoSectionFour 
-        titlelist1="firemní & prezentační weby" subtitlelist1="Chcete zapůsobit na Vaše potencionální zákazníky? Vytvoříme pro Vaši firmu moderní online prezentaci."
-        titlelist2="Obsahové weby & blogy" subtitlelist2="Na webu od nás se můžete pochlubit fotkami z Vaší letošní dovolené v Chorvatsku. Zvládneme ale i složitější projekty vzdělávacího nebo prezentačního charakteru."
-        titlelist3="webové aplikace" subtitlelist3="Jednodušší i složitější aplikace běžící ve webovém rozhraní zvládneme levou zadní. Ale i když makáme fakt fest, tak aplikace pro iOS a Android ještě neumíme. Budete se proto muset poohlédnout jinde."
-        titlelist4="Produktové prodejní weby" subtitlelist4="Máte hotový produkt, který potřebujete prodat zákazníkům? My se o to postaráme."
-      ></WeDoSectionFour>
+      <WeDoSection>
+        <WeDoSectionItem title="firemní & prezentační weby" subtitle="Chcete zapůsobit na Vaše potencionální zákazníky? Vytvoříme pro Vaši firmu moderní online prezentaci."/>
+
+        <WeDoSectionItem title="Obsahové weby & blogy" subtitle="Na webu od nás se můžete pochlubit fotkami z Vaší letošní dovolené v Chorvatsku. Zvládneme ale i složitější projekty vzdělávacího nebo prezentačního charakteru."/>
+
+        <WeDoSectionItem title="E-shopy" subtitle="Prostě E-shopy"/>
+
+        <WeDoSectionItem title="Webové aplikace" subtitle="Jednodušší i složitější aplikace běžící ve webovém rozhraní zvládneme levou zadní. Ale i když makáme fakt fest, tak aplikace pro iOS a Android ještě neumíme. Budete se proto muset poohlédnout jinde."/>
+
+        <WeDoSectionItem title="Produktové prodejní weby" subtitle="Máte hotový produkt, který potřebujete prodat zákazníkům? My se o to postaráme."/>
+      </WeDoSection>
 
       <TGoldenGate></TGoldenGate>
       <THooters></THooters>
       <TCosuma></TCosuma>
+      <TKozackyMed></TKozackyMed>
+      
 
     <HowWeWorkSection></HowWeWorkSection>
 
@@ -71,13 +80,21 @@ export default function WebyPage() {
         title="Nástroje které používáme" 
         subtitle=""
         logo1={tech1}
+        alt1="React JS"
         logo2={tech2}
+        alt2="Node JS"
         logo3={tech3}
+        alt3="Gatsby JS"
         logo4={tech4}
+        alt4="SASS language"
         logo5={tech5}
+        alt5="Shoptet"
         logo6={tech6}
+        alt6="Wordpress"
         logo7={tech7}
+        alt7="Woocommerce"
         logo8={tech8}
+        alt8="Adobe XD"
     ></LogosEight>
 
     <TextWhite 
