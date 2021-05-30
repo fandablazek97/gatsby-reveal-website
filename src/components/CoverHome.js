@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 // Animation - Framer Motion
 import { motion } from "framer-motion"
-import { useScroll } from "./hooks/useScroll"
+import { useScrollAnim } from "./hooks/useScrollAnim"
 import { fadeFast, fadeItem, opacityItem } from "./hooks/animation"
 
 // Assets
@@ -17,15 +17,16 @@ import TextTransition from "react-text-transition";
 
 const TEXTS = [
     "weby",
-    "e-shopy",
     "grafiku",
-    "branding"
+    "content",
+    "branding",
+    "e-shopy"
   ];
 
 export default function CoverHome() {
 
     // Animation based on intersection observer
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
 
     // // Animated Text 
     const [index, setIndex] = useState(0);
@@ -64,7 +65,7 @@ export default function CoverHome() {
                 <img src={image} alt="Cover"/>
             </div> */}
             <StaticImage 
-                    src="../images/img-base/homepage-3.jpg"
+                    src="../images/img-base/cover-homepage.jpg"
                     alt="Úvodní fotka webu"
                     className="cover__hero"
                     objectFit="cover"

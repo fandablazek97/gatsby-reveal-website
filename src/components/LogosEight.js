@@ -2,12 +2,12 @@ import React from 'react'
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
+import {useScrollAnim} from "./hooks/useScrollAnim"
 import { fadeFast, fadeItem } from "./hooks/animation"
 
 export default function LogosEight({title, subtitle, logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, alt1, alt2, alt3, alt4, alt5, alt6, alt7, alt8}) {
     
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
 
     return (
         <section className="logos bg-white">

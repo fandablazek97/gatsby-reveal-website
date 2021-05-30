@@ -2,8 +2,8 @@ import React from 'react'
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
-import {useScrollSecond} from "./hooks/useScrollSecond"
+import {useScrollAnim} from "./hooks/useScrollAnim"
+import {useScrollAnimSecond} from "./hooks/useScrollAnimSecond"
 import {fade, fadeItem} from "./hooks/animation"
 
 // Image plugin
@@ -15,8 +15,8 @@ import logo from "../images/svg-ref/cosuma-wide.svg";
 
 export default function TCosuma() {
 
-    const [element, controls] = useScroll();
-    const [ref, reveal] = useScrollSecond();
+    const [element, controls] = useScrollAnim();
+    const [ref, reveal] = useScrollAnimSecond();
 
     return (
         <section className="testimonial testimonial--img-left testimonial--text-black bg-gray-100 grid wrap-fluid">

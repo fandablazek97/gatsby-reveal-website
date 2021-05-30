@@ -2,7 +2,7 @@ import React from "react";
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
+import {useScrollAnim} from "./hooks/useScrollAnim"
 import {fade, fadeItem} from "./hooks/animation"
 
 // Images
@@ -10,7 +10,7 @@ import watermark from "../images/svg-base/reveal-symbol-solid.svg"
 
 export default function AboutSection({children}) {
 
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
     return (
             <section className="about bg-gradient-gray py-4" id="about-section">
         <div className="wrap">

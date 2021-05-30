@@ -108,11 +108,11 @@ export default function Navbar() {
                 <img src={logo} alt="brand-logo" className={`${menuOpen ? "logo--white-overlay" : ""}`}/>
             </Link>
 
-            <div onClick={menuOpenToggle} className={menuOpen ? "navbar__opener navbar__opener--active" : "navbar__opener"}>
+            <button onClick={menuOpenToggle} className={menuOpen ? "navbar__opener navbar__opener--active" : "navbar__opener"}>
                 <div id="opener-1"></div>
                 <div id="opener-2"></div>
                 <div id="opener-3"></div>
-            </div>
+            </button>
 
         <div className={`navbar__menu ${menuOpen ? "navbar__menu--active" : ""} ${menuHover ? "navbar__menu--hovering" : ""}`}>
 

@@ -10,9 +10,8 @@ import TextGray from "../components/TextGray";
 import WeDoSection from "../Components/WeDoSection";
 import WeDoSectionItem from "../Components/WeDoSectionItem";
 
-import TGoldenGate from "../components/TGoldenGate";
+import TKozackyMed from "../components/TKozackyMed";
 import THooters from "../components/THooters";
-import TCosuma from "../components/TCosuma";
 
 import LogosSix from "../components/LogosSix";
 import NextServicesSection from "../components/NextServicesSection";
@@ -49,7 +48,7 @@ export default function MarketingPage() {
 
       <TextGray 
         title="Vstupenka do světa onlinu" 
-        subtitle="Vítejte ve světě neomezených možností. Začít propagovat produkt či službu pomocí sociálních sítí je nejsnazší cesta k získání prvních zákazníků. Věřte nebo ne ale Facebook používá bezmála 3 miliardy uživatelů. A kde jinde najdete tolik potenciálních zákazníků?"
+        subtitle="Vítejte ve světě neomezených možností. Začít propagovat produkt či službu pomocí sociálních sítí je nejsnazší cesta k získání prvních zákazníků. Věřte nebo ne, ale Facebook používá bezmála 3 miliardy uživatelů. A kde jinde najdete tolik potenciálních zákazníků?"
       ></TextGray>
 
       <WeDoSection> 
@@ -62,9 +61,8 @@ export default function MarketingPage() {
         <WeDoSectionItem title="SEO" subtitle="Pomocí optimalizace pro vyhledávače zvýšíte návštěvnost vašeho webu z organického vyhledávání. Vždy pamatujte že, SEO je investice do budoucna!"/>
       </WeDoSection>
 
-      <TGoldenGate></TGoldenGate>
+      <TKozackyMed></TKozackyMed>
       <THooters></THooters>
-      <TCosuma></TCosuma>
 
     <LogosSix 
         title="Nástroje které používáme" 

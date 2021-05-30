@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 // Animation
 import { motion } from "framer-motion"
-import { useScroll } from "./hooks/useScroll"
+import { useScrollAnim } from "./hooks/useScrollAnim"
 import { fadeFast, fadeItem, opacityItem } from "./hooks/animation"
 
 // Data
@@ -13,7 +13,7 @@ import { fadeFast, fadeItem, opacityItem } from "./hooks/animation"
 
 export default function Cover404() {
 
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
 
     return (
         <section className="cover cover--fullscreen cover--404">
@@ -30,7 +30,7 @@ export default function Cover404() {
             <div className="cover__hero-overlay"></div>
                 
             <StaticImage 
-                    src="../images/img-base/404.jpg"
+                    src="../images/img-base/cover-404.jpg"
                     alt="Úvodní fotka stránky"
                     className="cover__hero"
                     objectFit="cover"

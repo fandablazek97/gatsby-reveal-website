@@ -1,16 +1,16 @@
 import React from 'react'
 
 // Components
-import WeDoSectionItem from "./WeDoSectionItem"
+// import WeDoSectionItem from "./WeDoSectionItem"
 
 // Animation
 import { motion } from "framer-motion"
-import { useScroll } from "./hooks/useScroll"
-import { fade, fadeItem } from "./hooks/animation"
+import { useScrollAnim } from "./hooks/useScrollAnim"
+import { fade } from "./hooks/animation"
 
 export default function WeDoSection({ children }) {
     
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
     
     return (
         <section className="we-do bg-white py-10">

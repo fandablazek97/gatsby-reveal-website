@@ -2,8 +2,8 @@ import React from 'react'
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
-import {useScrollSecond} from "./hooks/useScrollSecond"
+import {useScrollAnim} from "./hooks/useScrollAnim"
+import {useScrollAnimSecond} from "./hooks/useScrollAnimSecond"
 import {fade, fadeItem} from "./hooks/animation"
 
 // Image plugin
@@ -15,8 +15,8 @@ import logo from "../images/svg-ref/event-reality-white.svg";
 
 export default function TGoldenGate() {
 
-    const [element, controls] = useScroll();
-    const [ref, reveal] = useScrollSecond();
+    const [element, controls] = useScrollAnim();
+    const [ref, reveal] = useScrollAnimSecond();
 
     return (
         <section className="testimonial testimonial--img-left bg-dark-violet grid wrap-fluid">
@@ -34,7 +34,7 @@ export default function TGoldenGate() {
             <motion.div ref={ref} variants={fade} animate={reveal} initial="hidden" className="testimonial__image cell l-6 m-12 s-12 container-img">
                 {/* <img src={image} alt="showreel"></img> */}
                 <StaticImage 
-                    src="../images/img-ref/website-golden-gate-v2.png"
+                    src="../images/img-ref/grafika-event-reality.png"
                     alt="ukázka naší práce pro golden gate"
                     className="overflow-visible"
                     formats={["auto", "webp", "avif", "png"]}

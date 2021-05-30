@@ -4,16 +4,12 @@ import { StaticImage } from "gatsby-plugin-image";
 
 // Animation
 import { motion } from "framer-motion"
-import { useScroll } from "./hooks/useScroll"
+import { useScrollAnim } from "./hooks/useScrollAnim"
 import { fadeFast, fadeItem, opacityItem } from "./hooks/animation"
-
-// Data
-// import video from "../Data/images/showreel_web.mp4";
-// import image from "../Data/images/gastro.png";
 
 export default function CoverWpAdmin() {
 
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
 
     return (
         <section className="cover cover--fullscreen cover--404">
@@ -29,7 +25,7 @@ export default function CoverWpAdmin() {
             <div className="cover__hero-overlay"></div>
                 
             <StaticImage 
-                    src="../images/img-base/wordpress.jpg"
+                    src="../images/img-base/cover-wordpress.jpg"
                     alt="Úvodní fotka stránky"
                     className="cover__hero"
                     objectFit="cover"

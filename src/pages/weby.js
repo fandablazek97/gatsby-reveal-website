@@ -61,17 +61,15 @@ export default function WebyPage() {
 
         <WeDoSectionItem title="Obsahové weby & blogy" subtitle="Na webu od nás se můžete pochlubit fotkami z Vaší letošní dovolené v Chorvatsku. Zvládneme ale i složitější projekty vzdělávacího nebo prezentačního charakteru."/>
 
-        <WeDoSectionItem title="E-shopy" subtitle="Prostě E-shopy"/>
+        <WeDoSectionItem title="E-shopy a prodejní weby" subtitle="Máte hotový produkt, který potřebujete prodat zákazníkům? Zvládneme od jednoduchých e-shopu s několika produkty až po složitější projekty."/>
 
-        <WeDoSectionItem title="Webové aplikace" subtitle="Jednodušší i složitější aplikace běžící ve webovém rozhraní zvládneme levou zadní. Ale i když makáme fakt fest, tak aplikace pro iOS a Android ještě neumíme. Budete se proto muset poohlédnout jinde."/>
-
-        <WeDoSectionItem title="Produktové prodejní weby" subtitle="Máte hotový produkt, který potřebujete prodat zákazníkům? My se o to postaráme."/>
+        <WeDoSectionItem title="Webové aplikace" subtitle="Jednodušší i složitější aplikace běžící ve webovém rozhraní zvládneme levou zadní."/>
       </WeDoSection>
 
       <TGoldenGate></TGoldenGate>
+      <TKozackyMed></TKozackyMed>
       <THooters></THooters>
       <TCosuma></TCosuma>
-      <TKozackyMed></TKozackyMed>
       
 
     <HowWeWorkSection></HowWeWorkSection>
@@ -99,7 +97,7 @@ export default function WebyPage() {
 
     <TextWhite 
       title="Jak je to cenově?" 
-      subtitle="Ke každému projektu přistupujeme individuálně a cena se určuje na základě požadavků a náročnosti projektu. Jednoduše, online vizitka bude stát asi míň, než komplexní firemní web s několika stránkami, podstránkami a blogem. Ale nebojte, vždy přihlédneme k vašemu rozpočtu."
+      subtitle="Ke každému projektu přistupujeme individuálně a cena se určuje na základě požadavků a náročnosti projektu. Ale nebojte, vždy přihlédneme k vašemu rozpočtu."
     ></TextWhite>
 
     <NextServicesSection>

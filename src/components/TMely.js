@@ -2,8 +2,8 @@ import React from 'react'
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
-import {useScrollSecond} from "./hooks/useScrollSecond"
+import {useScrollAnim} from "./hooks/useScrollAnim"
+import {useScrollAnimSecond} from "./hooks/useScrollAnimSecond"
 import {fade, fadeItem} from "./hooks/animation"
 
 // Image plugin
@@ -15,8 +15,8 @@ import logo from "../images/svg-ref/mely-bistro-white.svg";
 
 export default function THooters() {
 
-    const [element, controls] = useScroll();
-    const [ref, reveal] = useScrollSecond();
+    const [element, controls] = useScrollAnim();
+    const [ref, reveal] = useScrollAnimSecond();
 
     return (
        <section className="testimonial bg-gray-800 grid wrap-fluid">
@@ -30,13 +30,12 @@ export default function THooters() {
                     <li>Grafika</li>
                     <li>Tiskoviny</li>
                     <li>Web</li>
-                    <li>Sociální sítě</li>
                 </motion.ul>
             </motion.div>
             <motion.div ref={ref} variants={fade} animate={reveal} initial="hidden" className="testimonial__image cell l-6 m-12 s-12 container-img">
                 {/* <img src={image} alt="showreel"></img> */}
                 <StaticImage 
-                    src="../images/img-ref/grafika-mely-bistro.png"
+                    src="../images/img-ref/grafika-mely-bistro-2.png"
                     alt="ukázka naší práce pro hooters"
                     className="overflow-visible"
                     placeholder="blurred"

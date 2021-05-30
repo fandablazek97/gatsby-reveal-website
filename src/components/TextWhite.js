@@ -2,12 +2,12 @@ import React from 'react'
 
 // Animation
 import { motion } from "framer-motion"
-import { useScroll } from "./hooks/useScroll"
+import { useScrollAnim } from "./hooks/useScrollAnim"
 import { fade, fadeItem } from "./hooks/animation"
 
 export default function TextGray({title, subtitle}) {
 
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
     
     return (
         <section className="bg-white">

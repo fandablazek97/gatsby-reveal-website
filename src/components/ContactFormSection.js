@@ -21,7 +21,7 @@ export default function ContactFormSection() {
                             <div>
                                 <label className="switch">
                                     <input type="checkbox"/>
-                                    <span class="slider round"></span>
+                                    <span className="slider round"></span>
                                 </label>
                                 <p className="pl-1">Web / Eshop</p>
                                 </div>
@@ -29,7 +29,7 @@ export default function ContactFormSection() {
                                 <div>
                                 <label className="switch">
                                     <input type="checkbox"/>
-                                    <span class="slider round"></span>
+                                    <span className="slider round"></span>
                                 </label>
                                 <p className="pl-1">Grafiku</p>
                                 </div>
@@ -37,7 +37,7 @@ export default function ContactFormSection() {
                                 <div>
                                 <label className="switch">
                                     <input type="checkbox"/>
-                                    <span class="slider round"></span>
+                                    <span className="slider round"></span>
                                 </label>
                                 <p className="pl-1">Online marketing</p>
                                 </div>

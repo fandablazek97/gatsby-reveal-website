@@ -67,10 +67,16 @@
 }
 
 // Burger menu icon
-.navbar__opener {
+.navbar__opener,
+.navbar__opener:focus {
   cursor: pointer;
   padding: 1rem;
   z-index: 100;
+
+  // Button reset styles
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .navbar__opener > div {

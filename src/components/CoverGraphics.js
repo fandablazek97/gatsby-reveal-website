@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
+import {useScrollAnim} from "./hooks/useScrollAnim"
 import {fadeFast, fadeItem} from "./hooks/animation"
 
 // Data
@@ -12,7 +12,7 @@ import {fadeFast, fadeItem} from "./hooks/animation"
 
 export default function CoverWebsites() {
 
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
 
     return (
         <section className="cover cover--fullscreen">

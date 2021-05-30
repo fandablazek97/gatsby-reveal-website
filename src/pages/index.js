@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
 
 // Components
 import Layout from "../components/layout"
@@ -13,8 +12,6 @@ import LogosSix from "../components/LogosSix";
 import TGoldenGate from "../components/TGoldenGate";
 import THooters from "../components/THooters";
 import TCosuma from "../components/TCosuma";
-// import TRightDefault from "../components/TRightDefault";
-// import TLeftDefault from "../components/TLeftDefault";
 
 import HowWeWorkSection from "../components/HowWeWorkSection";
 import MegaCTA from "../components/MegaCTA";
@@ -38,12 +35,6 @@ import marketingIcon from "../images/svg-icons/icon-3.svg";
 export default function IndexPage() {
   return (
       <>
-          <Helmet
-             bodyAttributes={{
-                class: 'scroll-smooth'
-            }}
-          />
-      
       <Layout>
         <Seo title="Digitální agentura"></Seo>
 
@@ -71,7 +62,7 @@ export default function IndexPage() {
 
         <LogosSix 
               title="Naši klienti" 
-              subtitle="Spolupracujeme s firmami všech velikostí i zaměření.  Podívejte se na několik vybraných z nich se kterými jsme spolupracovali."
+              subtitle="Za dobu našeho působení jsme zrealizovali několik desítek projektů. Podívejte se na několik vybraných klientů se kterými jsme spolupracovali."
               logo1={tech1}
               logo2={tech2}
               logo3={tech3}

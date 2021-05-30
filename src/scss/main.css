@@ -1052,7 +1052,7 @@ section,
 .wrap,
 .wrapper,
 .container {
-  max-width: 1560px;
+  max-width: 1520px;
   padding: 0 calc( 1.5rem + 3%);
   margin: 0 auto;
 }
@@ -1060,7 +1060,7 @@ section,
 .wrap-no-padding,
 .wrapper-no-padding,
 .container-no-padding {
-  max-width: 1560px;
+  max-width: 1520px;
   padding: 0;
   margin: 0 auto;
 }
@@ -3680,7 +3680,7 @@ section,
 
 .divider,
 hr {
-  max-width: 1560px;
+  max-width: 1520px;
   border: 1px solid #a9abb1;
   margin: 2rem auto;
 }
@@ -8358,8 +8358,8 @@ hr {
 .cover__hero-overlay {
   width: 100%;
   height: 100%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(11, 11, 16, 0.95)), to(rgba(11, 11, 16, 0.38)));
-  background-image: linear-gradient(to top, rgba(11, 11, 16, 0.95), rgba(11, 11, 16, 0.38));
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(11, 11, 16, 0.92)), to(rgba(11, 11, 16, 0.42)));
+  background-image: linear-gradient(to top, rgba(11, 11, 16, 0.92), rgba(11, 11, 16, 0.42));
   position: absolute;
   top: 0;
   right: 0;
@@ -8520,10 +8520,14 @@ hr {
           filter: brightness(0) invert(1);
 }
 
-.navbar__opener {
+.navbar__opener,
+.navbar__opener:focus {
   cursor: pointer;
   padding: 1rem;
   z-index: 100;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .navbar__opener > div {
@@ -8965,8 +8969,8 @@ hr {
 }
 
 .testimonial {
-  padding-top: 11rem;
-  padding-bottom: 11rem;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
 }
 
 .testimonial--img-left {

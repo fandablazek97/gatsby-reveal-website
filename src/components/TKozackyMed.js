@@ -2,8 +2,8 @@ import React from 'react'
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
-import {useScrollSecond} from "./hooks/useScrollSecond"
+import {useScrollAnim} from "./hooks/useScrollAnim"
+import {useScrollAnimSecond} from "./hooks/useScrollAnimSecond"
 import {fade, fadeItem} from "./hooks/animation"
 
 // Image plugin
@@ -15,8 +15,8 @@ import logo from "../images/svg-ref/kozacky-med-white.svg";
 
 export default function THooters() {
 
-    const [element, controls] = useScroll();
-    const [ref, reveal] = useScrollSecond();
+    const [element, controls] = useScrollAnim();
+    const [ref, reveal] = useScrollAnimSecond();
 
     return (
        <section className="testimonial bg-gradient-to-r-yellow grid wrap-fluid">
@@ -24,12 +24,13 @@ export default function THooters() {
                 <motion.div variants={fadeItem} className="testimonial__logo">
                     <img src={logo} alt=""></img>
                  </motion.div>
-                <motion.p variants={fadeItem} className="lead">Síť amerických restaurací Hooters působící v České republice využila našich kompletních služeb. Prvotně jsme vytvořili nové webové stránky s rezervačním systémem pro jejich restaurace. Dále naše spolupráce pokračuje ve formě tiskovin, správy sociálních sítí a focení jídel či eventů.</motion.p>
+                <motion.p variants={fadeItem} className="lead">„Kluky z reveal určitě doporučuji! E-shop je pěkný, funkční a předčil veškerá má očekávání, pokud tedy sháníte někoho, aby vám vytvořil web nebo e-shop, nikoho jiného bych vám ani nedoporučoval."</motion.p>
                 <motion.p variants={fadeItem} className="p-small">- Petr Kratochvíl</motion.p>
                <motion.ul variants={fadeItem} className="testimonial__list list-inline">
                     <li>Web</li>
                     <li>grafika</li>
-                    <li>sociální sítě</li>
+                    <li>fotky</li>
+                    <li>online marketing</li>
                 </motion.ul>
             </motion.div>
             <motion.div ref={ref} variants={fade} animate={reveal} initial="hidden" className="testimonial__image cell l-6 m-12 s-12 container-img">

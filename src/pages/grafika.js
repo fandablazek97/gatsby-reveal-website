@@ -55,11 +55,11 @@ export default function GrafikaPage() {
 
         <WeDoSectionItem title="Tvorba tiskovin" subtitle="Veškeré reklamní a upomínkové předměty jako jsou vizitky, letáky, slevové vouchery atd. Vše graficky navrhneme a případně i vyrobíme. Nemusíte se o nic starat."/>
 
-        <WeDoSectionItem title="Fotografie" subtitle="Propagační fotografie Vaší služby, produktů na eshop nebo na sociální sítě, případně i firemní portréty lidí ve Vaší firmě. Představivosti se meze nekladou."/>
+        <WeDoSectionItem title="Fotografie" subtitle="Propagační fotografie vašich služeb, produktů na e-shop nebo na sociální sítě. Případně i firemní portréty lidí ve Vaší firmě. Představivosti se meze nekladou."/>
 
-        <WeDoSectionItem title="Video" subtitle="Zvládneme super Stories natočené na iPhone. Ale taky Profesionální, minutu až tři dlouhý reklamní spot, u kterého se divák nebude nudit."/>
+        <WeDoSectionItem title="Video" subtitle="Zvládneme super Stories natočené na iPhone. Ale taky profesionální reklamní spot u kterého se divák nebude nudit."/>
 
-        <WeDoSectionItem title="Tisk a velkoplošný tisk" subtitle="Navržené materiály u našich dodavatelů necháme vyrobit a přivezeme vám je. Ať už potřebujete 500 letáků, billboardy pro celé město, polepit výlohu či firemní vozy."/>
+        <WeDoSectionItem title="Tisk a velkoplošný tisk" subtitle="Navržené materiály u našich dodavatelů necháme vyrobit a přivezeme vám je. Ať už potřebujete několik letáků, billboardy pro celé město, polepit výlohu či firemní vozy."/>
 
         <WeDoSectionItem title="3D vizualizace" subtitle="Potřebujete vidět produkt který ještě fyzicky nemáte nebo není možné jej jinak zachytit? Máte plány budovy a potřebujete ukázat klientům, jak bude vypadat až bude postavená? Vdechneme život vašim představám."/>
       </WeDoSection>

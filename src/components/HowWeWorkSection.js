@@ -5,7 +5,7 @@ import HowWeWorkItem from "./HowWeWorkItem"
 
 // Animation
 import { motion } from "framer-motion"
-import {useScroll} from "./hooks/useScroll"
+import {useScrollAnim} from "./hooks/useScrollAnim"
 import {fade, fadeItem} from "./hooks/animation"
 
 // Assets
@@ -16,7 +16,7 @@ import infinite from "../images/svg-base/infinite.svg";
 
 export default function HowWeWorkSection() {
 
-    const [element, controls] = useScroll();
+    const [element, controls] = useScrollAnim();
 
     return (
         <section className="process bg-white pt-8 pb-5">
@@ -45,13 +45,13 @@ export default function HowWeWorkSection() {
                 <HowWeWorkItem
                     symbol={three}
                     title="Realizace"
-                    caption="Celý web nakódujeme podle vytvořeného návrhu, vyladíme veškerou funkčnost, v případě potřeby napojíme na redakční systém a další nástroje třetích stran. V předem domluveném termínu dostanete hotový produkt, který bude ihned prodávat vaše podnikání."
+                    caption="Celý web vytvoříme podle zadaného návrhu, vyladíme veškerou funkčnost, v případě potřeby napojíme na redakční systém a další nástroje třetích stran. V předem domluveném termínu dostanete hotový produkt, který bude ihned prodávat vaše podnikání."
                 />
 
                 <HowWeWorkItem
                     symbol={infinite}
                     title="Předání a další rozvoj"
-                    caption="Předáním webu většinou naše práce nekončí. Právě naopak! Díky statistikám z analytických nástrojů vyhodnocujeme chování uživatelů a díky tomu jsme schopni navrhovat další vylepšení a dále produkt rozvíjet."
+                    caption="Předáním webu většinou naše práce nekončí. Právě naopak! Díky datům z analytických nástrojů umíme vyhodnotit chování uživatelů a jsme schopni navrhovat různá vylepšení a další kroky k vašemu rozvoji."
                 />
 
         </motion.div>
