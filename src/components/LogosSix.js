@@ -15,7 +15,7 @@ export default function LogosSix({title, subtitle, logo1, logo2, logo3, logo4, l
             <motion.div ref={element} variants={fadeFast} animate={controls} initial="hidden" className="grid py-6 wrap">
 
                 <div className="cell l-6">
-                    <motion.h2 variants={fadeItem}>{title}</motion.h2>
+                    <motion.h3 className="h2" variants={fadeItem}>{title}</motion.h3>
                     <motion.p variants={fadeItem}>{subtitle}</motion.p>
                 </div>
                 

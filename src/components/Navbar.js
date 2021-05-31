@@ -129,7 +129,7 @@ export default function Navbar() {
                 <ul className="navbar__menu-cta">
                     <li><a className="h5" href="tel:+420737090913">+420 737 090 913</a></li>
                     <li><a className="h5" href="mailto:info@reveal.cz">info@reveal.cz</a></li>
-                    <li><p>Lorem ipsum dolor sit amet.</p></li>
+                    <li><p>Na Belánce 15, Plzeň 301 00</p></li>
                 </ul>
                 <Socials></Socials>
             </div>

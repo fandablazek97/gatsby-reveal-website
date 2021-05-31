@@ -1053,7 +1053,7 @@ section,
 .wrapper,
 .container {
   max-width: 1520px;
-  padding: 0 calc( 1.5rem + 3%);
+  padding: 0 calc( 1.5rem + 3%);
   margin: 0 auto;
 }
 
@@ -1070,7 +1070,7 @@ section,
 .container-fluid,
 .fluid {
   width: 100%;
-  padding: 0 calc( 1.5rem + 3%);
+  padding: 0 calc( 1.5rem + 3%);
 }
 
 .wrap-fluid-no-padding,
@@ -8453,7 +8453,7 @@ hr {
 .navbar {
   width: 100vw;
   height: 115px;
-  padding: 0 calc( 1.5rem + 3%);
+  padding: 0 calc( 1.5rem + 3%);
   position: fixed;
   top: 0;
   left: 0;
@@ -8538,10 +8538,10 @@ hr {
   opacity: 1;
   -webkit-transform: rotate(0) translateX(0);
           transform: rotate(0) translateX(0);
-  -webkit-transition: opacity 330ms ease, background-color 330ms ease, -webkit-transform 330ms ease;
-  transition: opacity 330ms ease, background-color 330ms ease, -webkit-transform 330ms ease;
-  transition: transform 330ms ease, opacity 330ms ease, background-color 330ms ease;
-  transition: transform 330ms ease, opacity 330ms ease, background-color 330ms ease, -webkit-transform 330ms ease;
+  -webkit-transition: opacity 330ms ease, background-color 330ms ease, -webkit-transform 330ms ease;
+  transition: opacity 330ms ease, background-color 330ms ease, -webkit-transform 330ms ease;
+  transition: transform 330ms ease, opacity 330ms ease, background-color 330ms ease;
+  transition: transform 330ms ease, opacity 330ms ease, background-color 330ms ease, -webkit-transform 330ms ease;
 }
 
 .navbar__opener--active #opener-1 {
@@ -8566,7 +8566,7 @@ hr {
 .navbar__menu {
   width: 100vw;
   height: 100vh;
-  padding: 12rem calc( 1.5rem + 3%);
+  padding: 12rem calc( 1.5rem + 3%);
   padding-bottom: 20vh;
   background: transparent;
   position: fixed;
@@ -9212,7 +9212,7 @@ hr {
 .mega-cta__arrow {
   position: absolute;
   display: block;
-  right: calc( 1.5rem + 3%);
+  right: calc( 1.5rem + 3%);
   top: calc(50% - 2rem);
   bottom: calc(50% - 2rem);
 }
@@ -9391,6 +9391,7 @@ hr {
   color: #a9abb1;
   margin: 0;
   padding: 0;
+  min-width: 17rem;
 }
 
 .footer__copyright a:hover,
@@ -9551,10 +9552,17 @@ hr {
   font-weight: 400;
 }
 
-.form__toggleswitch {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.form--switch2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .form p, .form .p {
@@ -9567,7 +9575,8 @@ hr {
   position: relative;
   display: inline-block;
   width: 35px;
-  height: 19px;
+  height: 22px;
+  margin-right: 2rem;
 }
 
 /* Hide default HTML checkbox */
@@ -9595,8 +9604,8 @@ hr {
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
+  height: 22px;
+  width: 22px;
   background-color: white;
   -webkit-transition: color 200ms ease, -webkit-transform 200ms ease;
   transition: color 200ms ease, -webkit-transform 200ms ease;
@@ -9747,8 +9756,9 @@ input:checked + .slider:before {
 
 .gdpr {
   max-width: 1200px;
-  padding: 0 calc( 1.5rem + 3%);
+  padding: 0 calc( 1.5rem + 3%);
   margin: 0 auto;
+  margin-bottom: 10rem;
 }
 
 .gdpr p, .gdpr .p,

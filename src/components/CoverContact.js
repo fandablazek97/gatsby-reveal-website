@@ -19,11 +19,11 @@ export default function CoverContact() {
         <section className="cover cover--fullscreen">
             <motion.div ref={element} variants={fadeFast} animate={controls} initial="hidden" className="intro wrap">
                 <motion.h1 variants={fadeItem} className="white s-center">Řekněte nám <br></br> o vašem projektu</motion.h1>
-                <motion.p variants={fadeItem} className="p-large gray-200 s-center">Vyplňte poptávkový formulář níže, napište email, nebo klidně rovnou zavolejte.</motion.p>
+                <motion.p variants={fadeItem} className="p-large gray-200 s-center">Vyplňte poptávkový formulář níže, napište email nebo klidně rovnou zavolejte.</motion.p>
 
                 <div className="btn-group s-btn-group-column">
-                <motion.a variants={opacityItem} className="btn-inverse-primary btn-icon-left" href="tel:+420737090913"><span className="material-icons-outlined">phone_iphone</span>+420 737 090 913</motion.a>
-                <motion.a variants={opacityItem} className="btn-inverse-primary btn-icon-left" href="mailto:info@revealmedia.cz"><span className="material-icons-outlined">email</span>info@reveal.cz</motion.a>
+                <motion.a variants={opacityItem} className="btn-inverse-primary" href="tel:+420737090913">+420 737 090 913</motion.a>
+                <motion.a variants={opacityItem} className="btn-inverse-primary" href="mailto:info@revealmedia.cz">info@reveal.cz</motion.a>
                 </div>
                 
                 <div className="intro__scroll-down-arrow"><span className="material-icons-outlined">arrow_downward</span></div>

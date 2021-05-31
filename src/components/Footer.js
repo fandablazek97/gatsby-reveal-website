@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className="footer__brand">
                         <img src={logo} alt="logo"/>
                     </div>
-                    <p className="lead">Lorem ipsum dolor sit amet</p>
+                    <p className="lead">Rosteme společně s Vámi</p>
 
                     <Socials></Socials>
                 </div>
@@ -35,7 +35,7 @@ export default function Footer() {
                         <li><Link to="/kontakt" className="h6">Kontakt</Link></li>
                     </ul>
 
-                    <p className="p gray-500">Lorem ipsum dolor sit amet</p>
+                    <p className="p gray-500">Na Belánce 15, Plzeň 301 00</p>
                 </div>
             </div>
 
