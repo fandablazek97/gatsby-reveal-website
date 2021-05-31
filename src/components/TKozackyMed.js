@@ -24,7 +24,7 @@ export default function THooters() {
                 <motion.div variants={fadeItem} className="testimonial__logo">
                     <img src={logo} alt=""></img>
                  </motion.div>
-                <motion.p variants={fadeItem} className="lead">„Kluky z reveal určitě doporučuji! E-shop je pěkný, funkční a předčil veškerá má očekávání, pokud tedy sháníte někoho, aby vám vytvořil web nebo e-shop, nikoho jiného bych vám ani nedoporučoval."</motion.p>
+                <motion.p variants={fadeItem} className="lead">„Kluci z Reveal mi vytvořili web, který prodává. Za jejich profesionálním přístupem stojí i prvotřídní výsledky. Určitě doporučuji!"</motion.p>
                 <motion.p variants={fadeItem} className="p-small">- Petr Kratochvíl</motion.p>
                <motion.ul variants={fadeItem} className="testimonial__list list-inline">
                     <li>Web</li>
@@ -36,7 +36,7 @@ export default function THooters() {
             <motion.div ref={ref} variants={fade} animate={reveal} initial="hidden" className="testimonial__image cell l-6 m-12 s-12 container-img">
                 {/* <img src={image} alt="showreel"></img> */}
                 <StaticImage 
-                    src="../images/img-ref/website-kozacky-med-3.png"
+                    src="../images/img-ref/website-kozacky-med.png"
                     alt="ukázka naší práce pro hooters"
                     className="overflow-visible"
                     placeholder="blurred"

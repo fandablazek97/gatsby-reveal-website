@@ -36,11 +36,11 @@ export default function CoverContact() {
                 <img src={image} alt="Cover"/> */}
 
                 <StaticImage 
-                    src="../images/img-base/preview-2.jpg"
+                    src="../images/img-base/cover-kontakt-2.jpg"
                     alt="Úvodní fotka stránky"
                     className="cover__hero"
                     objectFit="cover"
-                    objectPosition="50% 50%"
+                    objectPosition="55% 50%"
                     formats={["AUTO", "WEBP", "AVIF", "JPG"]}
                     placeholder="dominantColor"
                 />

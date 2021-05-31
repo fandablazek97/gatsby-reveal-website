@@ -8601,13 +8601,13 @@ hr {
 }
 
 .navbar__menu--active .navbar__menu-cta {
-  -webkit-animation: showNavigationLinks 600ms ease 300ms forwards;
-          animation: showNavigationLinks 600ms ease 300ms forwards;
+  -webkit-animation: showNavigationLinks 600ms ease 350ms forwards;
+          animation: showNavigationLinks 600ms ease 350ms forwards;
 }
 
 .navbar__menu--active .socials {
-  -webkit-animation: showNavigationLinks 600ms ease 450ms forwards;
-          animation: showNavigationLinks 600ms ease 450ms forwards;
+  -webkit-animation: showNavigationLinks 600ms ease 500ms forwards;
+          animation: showNavigationLinks 600ms ease 500ms forwards;
 }
 
 .navbar__menu-left {
@@ -8666,8 +8666,8 @@ hr {
   cursor: pointer;
   color: white;
   text-transform: uppercase;
-  line-height: 1.3;
-  font-size: 4.6rem;
+  line-height: 1.1;
+  font-size: 4.5rem;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -8763,14 +8763,14 @@ hr {
     padding-bottom: 10rem;
   }
   .navbar__menu-list li {
-    margin: 0.8em 0;
+    margin: 0.9em 0;
     padding: 0;
   }
   .navbar__menu-cta li {
     margin: 0.2em 0;
   }
   .navbar__menu-left .navbar__menu-link {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     letter-spacing: normal;
   }
 }
@@ -9759,7 +9759,7 @@ input:checked + .slider:before {
 
 .gdpr h3, .gdpr .h3,
 .gdpr .h3 {
-  margin-top: 4em;
+  margin-top: 3em;
 }
 
 .gdpr h3:first-of-type, .gdpr .h3:first-of-type {

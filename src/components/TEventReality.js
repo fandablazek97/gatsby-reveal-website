@@ -24,8 +24,8 @@ export default function TGoldenGate() {
                 <motion.div variants={fadeItem} className="testimonial__logo">
                     <img src={logo} alt=""></img>
                 </motion.div>
-                <motion.p variants={fadeItem} className="lead">„Kluky určitě doporučuji. Web patří k nejlepšímu, co naši obchodníci používají. Tvorba bez problémů, požadavky z mé strany byly vyřešeny rychle a k mé spokojenosti."</motion.p>
-                <motion.p variants={fadeItem}>- Marek Dyršmíd, oblastní vedoucí ve společnosti Golden gate</motion.p>
+                <motion.p variants={fadeItem} className="lead">„Rád bych doporučil tvorbu webů a grafiky od firmy Reveal. Musím vyzvednout jejich přístup. Perfektní zpracování a hlavně i skvělé nápady. Za naši firmu určitě doporučuji. A to i náročným zákazníkům."</motion.p>
+                <motion.p variants={fadeItem}>- Libor Dobrovolný - CEO ve společnosti Event Reality</motion.p>
             <motion.ul variants={fadeItem} className="testimonial__list list-inline">
                     <li>Logo</li>
                     <li>Vizuální identita</li>

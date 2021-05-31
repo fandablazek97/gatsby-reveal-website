@@ -118,6 +118,7 @@ export default function Navbar() {
 
              <div className="navbar__menu-left">
                 <ul onMouseEnter={hoverHandlerOn} onMouseLeave={hoverHandlerOff} className="navbar__menu-list">
+                <li><Link onClick={menuClose} className="navbar__menu-link" to="/">Hlavní strana</Link></li>
                     <li><Link onClick={menuClose} className="navbar__menu-link" to="/weby">Weby & E-shopy</Link></li>
                     <li><Link onClick={menuClose} className="navbar__menu-link" to="/grafika">Grafické práce</Link></li>
                     <li><Link onClick={menuClose} className="navbar__menu-link" to="/marketing">Online marketing</Link></li>

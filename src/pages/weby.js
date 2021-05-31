@@ -67,9 +67,9 @@ export default function WebyPage() {
       </WeDoSection>
 
       <TGoldenGate></TGoldenGate>
-      <TKozackyMed></TKozackyMed>
       <THooters></THooters>
       <TCosuma></TCosuma>
+      <TKozackyMed></TKozackyMed>
       
 
     <HowWeWorkSection></HowWeWorkSection>

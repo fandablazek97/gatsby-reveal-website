@@ -29,6 +29,7 @@ export default function Footer() {
 
                     <h5 className="white">Navigace</h5>
                     <ul className="footer__nav list-inline">
+                        <li><Link to="/" className="h6">Hlavní strana</Link></li>
                         <li><Link to="/weby" className="h6">Weby & Eshopy</Link></li>
                         <li><Link to="/grafika" className="h6">Grafika</Link></li>
                         <li><Link to="/marketing" className="h6">Online marketing</Link></li>

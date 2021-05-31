@@ -61,8 +61,8 @@ export default function MarketingPage() {
         <WeDoSectionItem title="SEO" subtitle="Pomocí optimalizace pro vyhledávače zvýšíte návštěvnost vašeho webu z organického vyhledávání. Vždy pamatujte že, SEO je investice do budoucna!"/>
       </WeDoSection>
 
-      <TKozackyMed></TKozackyMed>
       <THooters></THooters>
+      <TKozackyMed></TKozackyMed>
 
     <LogosSix 
         title="Nástroje které používáme" 
