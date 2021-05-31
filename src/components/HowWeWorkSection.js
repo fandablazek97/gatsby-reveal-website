@@ -23,7 +23,7 @@ export default function HowWeWorkSection() {
 
             <div className="grid wrap">
                 <motion.div ref={element} variants={fade} animate={controls} initial="hidden" className="cell">
-                    <motion.h2 variants={fadeItem}>Jak Fungujeme</motion.h2>
+                    <motion.h3 variants={fadeItem}>Jak Fungujeme</motion.h3>
                     {/* <motion.p variants={fadeItem}>Pokud zrovna nečekáme na podklady od klientů, tak začínáme na schůzce s Vámi. </motion.p> */}
                 </motion.div>
             </div>

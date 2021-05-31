@@ -7,7 +7,7 @@ export default function NextServicesSection({children}) {
 
                 <div className="grid wrap">
 
-                    <h2 className="cell l-12 m-12 s-12">Další služby</h2>
+                    <h3 className="cell l-12 m-12 s-12 h2">Další služby</h3>
 
                     <div className="cell l-6 m-12 s-12">{children[0]}</div>
 

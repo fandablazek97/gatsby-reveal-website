@@ -24,7 +24,7 @@ export default function THooters() {
                 <motion.div variants={fadeItem} className="testimonial__logo">
                     <img src={logo} alt=""></img>
                  </motion.div>
-                <motion.p variants={fadeItem} className="lead font-sans fw-400">Síť amerických restaurací Hooters působící v České republice využila našich kompletních služeb. Prvotně jsme vytvořili nové webové stránky s rezervačním systémem pro jejich restaurace. Dále naše spolupráce pokračuje ve formě tiskovin, správy sociálních sítí a focení jídel či eventů.</motion.p>
+                <motion.p variants={fadeItem} className="lead font-sans fw-400">Síť amerických restaurací Hooters působící v České republice využila našich kompletních služeb. Prvotně jsme vytvořili nové webové stránky s rezervačním systémem pro jejich restaurace. Dále naše spolupráce pokračuje ve formě tvorby tiskovin, správy sociálních sítí a focení jídel či eventů.</motion.p>
                 {/* <motion.p variants={fadeItem} className="p-small">- Marek Dyršmíd, oblastní vedoucí ve společnosti Golden gate</motion.p> */}
                <motion.ul variants={fadeItem} className="testimonial__list list-inline">
                     <li>Web</li>

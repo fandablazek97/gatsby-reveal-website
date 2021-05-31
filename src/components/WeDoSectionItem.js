@@ -11,7 +11,7 @@ export default function WeDoSectionItem({title, subtitle}) {
 
     return (
         <motion.li ref={element} variants={fade} animate={controls} initial="hidden" className="we-do__list-item">
-            <h3>{title}</h3>
+            <h2 className="h3">{title}</h2>
             <p>{subtitle}</p>
         </motion.li>
     )

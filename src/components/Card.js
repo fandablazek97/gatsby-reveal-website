@@ -15,7 +15,7 @@ export default function Card({path, icon, title}) {
             <div className="card__head-icon">
                 <img src={icon} alt="icon" />
             </div>
-            <h3 className="h4">{title}</h3>
+            <h2 className="h4">{title}</h2>
             <span className="card__arrow material-icons-outlined">arrow_forward</span>
         </Link>
     )

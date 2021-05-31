@@ -36,7 +36,7 @@ export default function IndexPage() {
   return (
       <>
       <Layout>
-        <Seo title="Digitální agentura"></Seo>
+        <Seo title="Digitální agentura" ></Seo> 
 
         <CoverHome></CoverHome>
 

@@ -12,6 +12,7 @@ import WeDoSectionItem from "../Components/WeDoSectionItem";
 
 import TKozackyMed from "../components/TKozackyMed";
 import THooters from "../components/THooters";
+import TEventReality from "../components/TEventReality";
 
 import LogosSix from "../components/LogosSix";
 import NextServicesSection from "../components/NextServicesSection";
@@ -63,6 +64,7 @@ export default function MarketingPage() {
 
       <TKozackyMed></TKozackyMed>
       <THooters></THooters>
+      <TEventReality></TEventReality>
 
     <LogosSix 
         title="Nástroje které používáme" 
